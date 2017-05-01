@@ -18,13 +18,23 @@
 </head>
 
 <body>
-<h1 style="position: fixed;
-font-size: 1;
-opacity: 0;">BEST Hackathon Хакатон Hakaton хакатон hackathon hackaton</h1>
+<h1 style="display: none;">BEST Hackathon Хакатон Hakaton хакатон hackathon hackaton</h1>
 
 <h1 id="revealer__text" class="reveal-text">Hello!</h1>  
 
-
+<div id="main-content">
+<img id="benia" onclick="clikker()" onmouseover="hover_be()" onmouseout="hover_ben()" src="images\benia_menu.png" />
+	<div class="row" style="margin-bottom: auto!IMPORTANT">
+		<div class="col s6" id="left">
+			<a onmouseover="hover1()" onmouseout="hover_res()" href="#"><h1>REGULAR</h1></a>
+		</div>
+		<div class="col s6" id="right">
+			<a onmouseover="hover2()" onmouseout="hover_res()" href="http://hack.best-lviv.org.ua/console"><h1>CONSOLE</h1></a>
+		</div>
+	</div>
+</div>
+<div id="background1"></div>
+<div id="background2"></div>
 <!--SCRIPTS-->
 	<script src="js/index.js"></script> 
 <!--Import jQuery before materialize.js-->
