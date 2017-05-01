@@ -45,6 +45,7 @@ body {
   white-space: nowrap;
   cursor: default;
 }
+
 .reveal-text:after {
   content: "";
   position: absolute;

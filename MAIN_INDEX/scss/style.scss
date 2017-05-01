@@ -1,19 +1,11 @@
 // ••·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·••
 
 // Configuration:
-$animation-delay: 2s;
+$animation-delay: 1s;
 $duration: 800ms;
-$iterations: 2;
+$iterations: 1;
 
 // ••·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·••
-
-
-
-
-
-
-
-
 
 
 body {
@@ -92,24 +84,5 @@ body {
 	
 	100% {
 		transform: scaleX(0);
-	}
-}
-
-
-
-
-
-
-
-
-
-.note {
-	position: fixed;
-	bottom: 1vh;
-	font-size: 12px;
-	color: rgba(0,0,0,0.3);
-	
-	pre {
-		display: inline-block;
 	}
 }
