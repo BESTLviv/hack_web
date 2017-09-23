@@ -1,27 +1,270 @@
 <!DOCTYPE html>
-<html >
-<head>
-  <meta charset="UTF-8">
-  <title>Bruteforce Hacking Simulator</title>
-  <link href='http://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<html>
+    <head>
+      <meta charset="UTF-8" />
+      <title>BEST HACKATHON</title>
+      <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+      <!--Styles-->
+     <link rel = "stylesheet" type = "text/css" href = "css/style.css">
+     <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/mruoss/jquery-scroll-indicator-bullets/2.0.0/dist/jquery.scrollindicatorbullets.css" media="screen">
+     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
+     <link rel="stylesheet" href="fonts/styles.css">
 
-  
-      <link rel="stylesheet" href="css/style.css">
+     <!--Icon-->
+      <link rel="shortcut icon" href="favicon.ico" type="image/png">
 
-  
-</head>
+    <!--Scripts-->
+     <!--JQuery:         -->
+      <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+     <!--Ajax:         -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+     <!--Bootstrap:
+           Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      <!-- Optional theme -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+      <!-- Latest compiled and minified JavaScript -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+      <!--Font-awesome:         -->
+      <script src="https://use.fontawesome.com/f722cd8311.js"></script>
 
-<body>
-  <div class="info">
-	<p>You've accessed the mainframe of BEST::HACKathon website but here is password required,<br>you need to brute-force it...</p>
-	<p class="hidden">Press any button to hack<span class="blink">_</span></p>
-</div>
-<div class="password hidden"></div>
-<div class="button start">START HACKING!</div>
-<div class="blink granted hidden">ACCESS GRANTED!</div>
-  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    </head>
+    <body style="overflow-x: hidden" id="body">
+    <div id="hellopreloader"><div id="hellopreloader_preload" style="opacity: 0.05; display: none;"></div></div>
+    <a href="#" id="scrollToTop" class="js-scroll-to-top" style="display: none;">⇡</a>
+    <a id="nav-toggle" href="#" class=""><span></span></a>
+    <span id="circle" href="#"></span>
+    <div id="menu" class="row no-margin">
+      <div class="col-xs-12 no-margin center-green-column">
+        <img id="benia" src="images/blocks/benia.png" alt="">
+        <div class="targets">
+          <ul>
+          <li><a href="#sec">ПРО ХАКАТОН</a></li>
+          <li><a href="#reg">РЕЄСТРАЦІЯ</a></li>
+          <li><a href="#gallery">ФОТО</a></li>
+          <li><a href="#partn">ПАРТНЕРИ</a></li>
+          <!--<li><a href="#mentrs">МЕНТОРИ</a></li>-->
+          <li><a href="#core">КОМАНДА</a></li>
+          <li><a href="#cont">КОНТАКТИ</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+      <div class="container-fluid" style="padding: 0px;">
+        <section>
+          <div id="top" class="row scroll-section no-margin">
+              <img id="top_logo" src="images/blocks/logo.png" alt="">
+              <div id="#for_partn" class="col-xs-12 col-sm-6 no-margin left-side-column text-center"><a class="button top_btn" href="http://hack.best-lviv.org.ua/console" >Geek version</a><div id="second_button" class="hide"><br><br><a class="button top_btn" href="#sec">Slide down</a></div></div>
+            <span id="rightcol" class=""><div id="#for_partr" class="col-xs-12 col-sm-6 no-margin right-side-column text-center"><a class="button top_btn1" href="#sec">Slide down</a></div></span>
+          <a href="#sec"><i class="fa fa-angle-double-down" aria-hidden="true" style="font-size: 60pt"></i></a>
+        </div>
+        </section>
+        <section>
+          <div id="sec" class="row scroll-section no-margin">
+            <div id="#do_you" class="col-xs-12 col-sm-6 no-margin left-side-column_1">
+              <div class="window">
+                <div class="bar">
+                  <p>BEST HACKATHON</p>
+                  <div class="point firstp"></div>
+                  <div class="point secondp"></div>
+                  <div class="point thirdp"></div>
+                </div>
+                <div class="content">
+                  <div id="ifno">
+                    <h2>Hackathon</h2> - це захід,
+                    на який збираються розробники, дизайнери, інженери,
+                    щоб за обмежений час в режимі інтенсиву та командної роботи,
+                    створити та презентувати свій проект
+                  </div>
+                  <div id="ifyes">
+                    <h2>BEST</h2><h3>HACKATHON</h3><h4>7-9 ЖОВТНЯ 2017</h4>
+                    <a href="#sched"><div class="button sched">РОЗКЛАД</div></a>
+                  </div>
+                  <div id="question">
+                    <div class="text">
+                      <img src="images/blocks/benia.png" alt="">
+                      <p>А ти знаєш, що таке<br>BEST::HACKathon?</p>
+                    </div>
+                    <div id="yes" class="button yes">Так</div>
+                    <div id="no" class="button yes no">Ні </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="#categ" class="col-xs-12 col-sm-6 no-margin right-side-column_1">
+              <section class="strips">
+              <article class="strips__strip">
+                <div class="strip__content">
+                  <h1 class="strip__title" data-name="Ipsum">Game</h1>
+                  <div class="strip__inner-text" style="transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1) 0.3s;">
+                    <img src="images/columns/pc.png" alt="">
+                    <h2></h2>
+                    <p>Категорія, у якій перед учасниками стоїть завдання створити комп’ютерну гру для пк. Для цього вони можуть використовувати будь-які інструменти, засоби та методи. Єдиною умовою є те, щоб у грі були задіяні слова, які кожна команда отримає випадковим чином безпосередньо перед початком визаченого часу.
+                    </p>
+                  </div>
+                </div>
+              </article>
+              <article class="strips__strip">
+                <div class="strip__content">
+                  <h1 class="strip__title" data-name="Dolor">Mobile</h1>
+                  <div class="strip__inner-text" style="transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1) 0.3s;">
+                    <img src="images/columns/app.png" alt="">
+                    <h2></h2>
+                    <p>У цій категорії учасники створюють додаток на смартфон. Випадковим чином їм надається галузь (наприклад транспорт, освіта, медицина і т.д.), яку вони повинні покращити своїм додатком. Тут на передній план виходить практичне застосування готової роботи, але й не потрібно забувати про гарний інтерфейс.</p>
+                  </div>
+                </div>
+              </article>
+              <article class="strips__strip">
+                <div class="strip__content">
+                  <h1 class="strip__title" data-name="Sit">Web</h1>
+                  <div class="strip__inner-text" style="transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1) 0.3s;">
+                    <img src="images/columns/web.png" alt="">
+                    <h2></h2>
+                    <p>Категорія, де учасники створюватимуть онлайн-сервіс на одну з актуальних тем (наприклад е-голосування, хмарні технлогоії, чат-боти і т.д.). Одними з головних вимог до проектів буде їхня зручність та ефективність.
+                    </p>
+                  </div>
+                </div>
+              </article>
+              <h1><i class="fa fa-times-circle strip__close" style="transition: all 0.2s cubic-bezier(0.23, 1, 0.32, 1) 0s;"></i></h1>
+            </section>
+            </div>
+          </div>
+        </section>
 
-    <script src="js/index.js"></script>
-</body>
+        <section id="reg" class="scroll-section">
+          <div class="row no-margin">
+            <div class="col-xs-12 no-margin center-green-column">
+              <div id="textbox" class="no-margin"><h2>ВСТИГНИ   ЗАРЕЄСТРУВАТИСЯ<br/>ДО   1   ЖОВТНЯ!</h2>
+              </div>
+              <img style="max-width: 60vw; border-radius: 14px;" src="images/dog.gif">
+              <center style="margin: 20px;"><div class="button partn_button reg_button"><a target="_blank" href="https://goo.gl/forms/5idGJdNFkVJ2KxAB3">РЕЄСТРАЦІЯ</a></div></center>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div id="gallery" class="row scroll-section no-margin">
+            <div id="gal" class="col-sm-6 col-xs-12 no-margin left-side-column">
+              <div class="pict">
+                <img src="images/blocks/galler.png" alt="">
+              </div>
+              <div class="button gal_button"><a href="https://www.flickr.com/photos/best_lviv/albums/72157668244164751" target="_blank">ГАЛЕРЕЯ</a></div>
+            </div>
+
+            <div id="sched" class="col-sm-6 col-xs-12 no-margin right-side-column">
+              <div class="schedule">
+              <h1>РОЗКЛАД</h1>
+              <h2>7 жовтня</h2>
+              <h3>10:00 - 11:00 представлення партнерів</h3>
+              <h3>11:00 - 12:00 початок змагань</h3>
+              <h3>15:00 - 16:00 обід</h3>
+              <h3>21:00 - 22:00 вечеря</h3>
+              <h2>8 жовтня</h2>
+              <h3>8:00 - 9:00 сніданок</h3>
+              <h3>12:00 презентації команд</h3> </div>
+            </div>
+        </div>
+        </section>
+
+        <section id="partn" class="scroll-section">
+          <div class="row no-margin">
+            <div class="col-xs-12 no-margin center-black-column">
+              <div id="textbox" class="no-margin"><h2>НАС    ПІДТРИМУЮТЬ:</h2></div>
+              <div class="partners">
+              <center>
+              <a href="https://tickets.ua/" target="_blank"><img src="images/partners/tickets.png" alt="Tickets" class="partners_1"></a>
+              <a href="https://www.infopulse.com/" target="_blank"><img src="images/partners/infopulse.png" alt="Infopulse" class="partners_1"></a>
+              <a href="https://incode-it.com/" target="_blank"><img src="images/partners/incode.png" alt="Incode" class="partners_1"></a>
+              </center>
+              </div>
+              <div id="textbox" class="no-margin"><h2>ІНФО-ПАРТНЕРИ:</h2></div>
+              <div class="partners">
+              <center>
+              <a href="https://sigma.software" target="_blank"><img src="images/partners/sigma.gif" alt="Sigma Software" class="partners_2"></a>
+               <a href="https://coworking.lviv.ua/" target="_blank"><img src="images/partners/ok_factory.png" alt="OK Factory coworking" class="partners_2"></a>
+              <a href="https://www.itcp-ua.com" target="_blank"><img src="images/partners/itcp_logo_new.png" alt="IT Career Professioals" class="partners_2"></a>
+              <a href="https://hi-tech.ua" target="_blank"><img src="images/partners/hi_tech.png" alt="Hi-tech" class="partners_2"></a>
+              </center>
+              </div>
+              <div id="textbox" class="no-margin"><h2>НАС    ПІДТРИМУВАЛИ</h2></div>
+              <div class="partners">
+              <center>
+              <a href="https://dataart.ua/" target="_blank"><img src="images/partners/dataart.png" alt="Data Art" class="partners_1"></a>
+              <a href="https://eleks.com/" target="_blank"><img src="images/partners/elex.png" alt="Elex" class="partners_1"></a>
+              <a href="https://softserve.ua" target="_blank"><img src="images/partners/softserve.png" alt="Soft Serve" class="partners_1"></a>
+              <a href="https://www.epam.com/" target="_blank"><img src="images/partners/epam.png" alt="Epam" class="partners_1"></a>
+              </center>
+              </div>
+              <div class="partners">
+              <center>
+              <a href="https://www.abtosoftware.com/" target="_blank"><img src="images/partners/abto.png" alt="Abto" class="partners_2"></a>
+              <a href="https://www.gameloft.com/" target="_blank"><img src="images/partners/gameloft.png" alt="Game Loft" class="partners_2"></a>
+              <a href="https://sombrainc.com/" target="_blank"><img src="images/partners/sombra.svg" alt="Sombra" class="partners_2"></a>
+              <a href="https://www.ubisoft.com/" target="_blank"><img src="images/partners/ubisoft.png" alt="Ubisoft" class="partners_2"></a>
+              <a href="https://www.globallogic.com/" target="_blank"><img src="images/partners/GL.png" alt="Global Logic" class="partners_2"></a>
+              </center>
+              </div>
+              <center style="margin: 20px;"><div class="button partn_button"><a href="#cont">СТАТИ ПАРТНЕРОМ</a></div></center>
+            </div>
+          </div>
+        </section>
+
+      <!--  <section id="mentrs" class="scroll-section">
+          <div class="row no-margin">
+            <div class = "col-xs-12 no-margin center-white-column"> Our mentors</div>
+          </div>
+        </section>-->
+
+        <section id="core" class="scroll-section">
+          <div class="row no-margin">
+            <div class="col-xs-12 no-margin center-green-column">
+              <div id="textbox" class="no-margin"><h2>КОМАНДА  BEST::HACKATHON  2017</h2></div>
+              <div id="facebox" class="row no-margin">
+                  <div><img id="lew" src="images/team/lew.png" alt=""></div>
+                  <div><img id="dasha" src="images/team/dasha.png" alt=""></div>
+                  <div><img id="sasha" src="images/team/sasha.png" alt=""></div>
+                  <div><img id="aida" src="images/team/aida.png" alt=""></div>
+                  <div><img id="chudia" src="images/team/chudia.png" alt=""></div>
+                  <div><img id="andr" src="images/team/andr.png" alt=""></div>
+                  <div><img id="oleh" src="images/team/oleh.png" alt=""></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="cont" class="scroll-section">
+          <div class="row no-margin">
+            <div class="col-xs-12 no-margin center-green-column">
+              <div class="window">
+                <div class="bar">
+                  <p>ВІДПРАВИТИ МЕССЕДЖ</p>
+                  <div class="point firstp"></div>
+                  <div class="point secondp"></div>
+                  <div class="point thirdp"></div>
+                </div>
+                <div class="content">
+                <div class="button gal_button" style="position: relative; top:40%; font-family: &#39;Play&#39;,monospace;"><a href="mailto:hack@best-lviv.org.ua">hack@best-lviv.org.ua</a></div>
+                <br>
+                <div class="button nets" style="position: relative; top:40%; font-family: &#39;Play&#39;,monospace;"><a href="https://www.facebook.com/best.hackathon/"><i class="fa fa-facebook" aria-hidden="true"></i></a></div>
+                <div class="button nets" style="position: relative; top:40%; font-family: &#39;Play&#39;,monospace;"><a href="https://twitter.com/BEST_HACKathon"><i class="fa fa-twitter" aria-hidden="true"></i></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!--side indicators of scrolling-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+      <script src="https://cdn.rawgit.com/imakewebthings/waypoints/4.0.0/lib/noframework.waypoints.min.js"></script>
+      <script src="https://cdn.rawgit.com/mruoss/jquery-scroll-indicator-bullets/2.0.0/dist/jquery.scrollindicatorbullets.min.js"></script>
+      <!--scroll to top-->
+      <script src="js/smoothscroll.js"></script>
+
+      <!--Main JS file-->
+      <script src="js/index.js"></script>
+
+    </body>
 </html>
