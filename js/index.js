@@ -55,66 +55,8 @@
  };
 
   // columns
-  //expanding dialogs about categories
-
-  var Expand = (function() {
-    var tile = $('.strips__strip');
-    var tileLink = $('.strips__strip > .strip__content');
-    var tileText = tileLink.find('.strip__inner-text');
-    var stripClose = $('.strip__close');
-
-    var expanded  = false;
-
-    var open = function() {
-
-      var tile = $(this).parent();
-
-        if (!expanded) {
-          tile.addClass('strips__strip--expanded');
-          // add delay to inner text
-          tileText.css('transition', 'all .5s .3s cubic-bezier(0.23, 1, 0.32, 1)');
-          stripClose.addClass('strip__close--show');
-          stripClose.css('transition', 'all .6s 1s cubic-bezier(0.23, 1, 0.32, 1)');
-          expanded = true;
-        }
-      };
-
-    var close = function() {
-      if (expanded) {
-        tile.removeClass('strips__strip--expanded');
-        // remove delay from inner text
-        tileText.css('transition', 'all 0.15s 0 cubic-bezier(0.23, 1, 0.32, 1)');
-        stripClose.removeClass('strip__close--show');
-        stripClose.css('transition', 'all 0.2s 0s cubic-bezier(0.23, 1, 0.32, 1)')
-        expanded = false;
-      }
-    }
-
-      var bindActions = function() {
-        tileLink.on('click', open);
-        stripClose.on('click', close);
-      };
-
-      var init = function() {
-        bindActions();
-      };
-
-      return {
-        init: init
-      };
-
-    }());
-
-  Expand.init();
-
-  //expanding dialogs about categories
 
   //opening menu
-  document.querySelector( "#nav-toggle" )
-    .addEventListener( "click", function() {
-      this.classList.toggle( "active" );
-      menu.classList.toggle( "active" );
-    });
 
     document.querySelector( "#yes" )
       .addEventListener( "click", function() {
@@ -130,111 +72,17 @@
 
 
     $(document).ready(function(){
-  	$("#body").on("click","a", function (event) {
-  		//отменяем стандартную обработку нажатия по ссылке
+    $("#body").on("click","a", function (event) {
+      //отменяем стандартную обработку нажатия по ссылке
 
 
-  		//забираем идентификатор бока с атрибута href
-  		var id  = $(this).attr('href'),
+      //забираем идентификатор бока с атрибута href
+      var id  = $(this).attr('href'),
 
-  		//узнаем высоту от начала страницы до блока на который ссылается якорь
-  			top = $(id).offset().top;
+      //узнаем высоту от начала страницы до блока на который ссылается якорь
+        top = $(id).offset().top;
 
-  		//анимируем переход на расстояние - top за 1500 мс
-  		$('body,html').animate({scrollTop: top}, 1500);
-  	});
+      //анимируем переход на расстояние - top за 1500 мс
+      $('body,html').animate({scrollTop: top}, 1500);
+    });
   });
-
-  function getTimeRemaining(endtime) {
-    var t = Date.parse(endtime) - Date.parse(new Date());
-    var seconds = Math.floor((t / 1000) % 60);
-    var minutes = Math.floor((t / 1000 / 60) % 60);
-    var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
-    var days = Math.floor(t / (1000 * 60 * 60 * 24));
-    return {
-      'total': t,
-      'days': days,
-      'hours': hours,
-      'minutes': minutes,
-      'seconds': seconds
-    };
-  }
-
-  function initializeClock(id, endtime) {
-    var clock = document.getElementById(id);
-    var daysSpan = clock.querySelector('.days');
-    var hoursSpan = clock.querySelector('.hours');
-    var minutesSpan = clock.querySelector('.minutes');
-    var secondsSpan = clock.querySelector('.seconds');
-
-    function updateClock() {
-      var t = getTimeRemaining(endtime);
-
-      daysSpan.innerHTML = t.days;
-      hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
-      minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
-      secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
-
-      if (t.total <= 0) {
-        clearInterval(timeinterval);
-      }
-    }
-
-    updateClock();
-    var timeinterval = setInterval(updateClock, 1000);
-  }
-
-  var deadline = 'August 31 2017 23:59:59 GMT+0300';
-  initializeClock('clockdiv', deadline);
-
-
-
-
-
-  if ($(window).width() < 768) {
-    $("#second_button").removeClass("hide");
-  }else{
-    $("#for_partr").removeClass("hide");
- }
-
-$(window).on("resize",function(){
-  if ($(window).width() < 768) {
-    $("#second_button").removeClass("hide");
-  }else{
-    $("#for_partr").removeClass("hide");
- }
-});
-
-/*
- * windowSize
- * call this function to get windowSize any time
- */
-function windowSize() {
-  windowHeight = window.innerHeight ? window.innerHeight : $(window).height();
-  windowWidth = window.innerWidth ? window.innerWidth : $(window).width();
-
-}
-
-//Init Function of init it wherever you like...
-windowSize();
-
-// For example, get window size on window resize
-$(window).load(function() {
-  windowSize();
-  if (windowWidth < 768) {
-   $("#second_button").removeClass("hide");
-  }else{
-    $("#rightcol").removeClass("hide");
-  }
-});
-
-$(window).resize(function() {
-  windowSize();
-  if (windowWidth < 768) {
-    $("#second_button").removeClass("hide");
-    $("#rightcol").addClass("hide");
-  }else{
-    $("#rightcol").removeClass("hide");
-    $("#second_button").addClass("hide");
-  }
-});
