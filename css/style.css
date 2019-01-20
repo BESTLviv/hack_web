@@ -2,6 +2,28 @@
  * Тут починається нормальний CSS
  */
 
+@media screen and (max-width: 767px)  {
+  h2 {
+    font-size: 2.4em !important;
+  }
+
+  h3 {
+    font-size: 2em !important;
+  }
+
+  p {
+   font-size: 1.2em !important;
+  }
+
+  .button {
+    font-size: 1.6em !important;
+  }
+}
+
+body {
+  font-family: 'hooge05_55Cyr2';
+}
+
 .light-blue {
   background-color: #426466;
 }
@@ -11,7 +33,7 @@
 }
 
 .section {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 #top_logo {
@@ -22,17 +44,68 @@
   width: 50vh;
 }
 
+
+#scrollToTop {
+  padding: 10px;
+  border-radius: 200px;
+  background-color: white;
+  color: black !important;
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  z-index: 1;
+  display: none;
+  transition-duration: 0.8s;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  cursor: pointer;
+}
+
+#scrollToTop:hover {
+  background-color: #3BAF0B;
+  transition-duration: 0.8s;
+}
+
+.partners_1 {
+  max-width: 200px;
+  margin: 32px;
+}
+
+
 /**
- * Start Button CSS
+ * START Text
+ */
+h2 {
+  font-size: 3.2em; 
+  color: #8eadad;
+}
+
+h3 {
+  font-size: 2.4em;
+  color: #3BAF0B;
+}
+
+p {
+  font-family: 'Play',sans-serif;
+  font-size: 1.6em;
+  color: #8eadad;
+}
+/**
+ * END Text
+ */
+
+
+/**
+ * START Buttons
  */
 .button {
   display: inline;
   padding: 8px 40px;
   border-radius: 16px;
   font-family: 'hooge05_55Cyr2';
-  font-size: 3em;
+  font-size: 2.4em;
   transition: 0.8s;
   color: white;
+  cursor: pointer;
 }
 
 .button:hover {
@@ -55,16 +128,14 @@
   color: #3BAF0B;
 }
 /**
- *END Button CSS
+ * END Buttons
  */
+
 
 /**
  * А тут він закінчується 
  */
 
-
-* {
-  box-sizing: border-box; }
 
 a {
     color:white!important;
@@ -74,10 +145,6 @@ a:hover {
     text-decoration: none!important;
 }
 
-h2 {
-  font-family: 'hooge05_55Cyr2';
-  color: #8eadad;
-}
 
 @media only screen and (max-width: 768px) {
   .pict img {
@@ -94,28 +161,6 @@ h2 {
   }
 }
 
-#scrollToTop{
-    padding:10px;
-    border-radius: 200px;
-    text-align:center;
-    background-color:white;
-    font-weight: bold;
-    color: black!important;
-    text-decoration: none;
-    position:fixed;
-    bottom:30px;
-    left:30px;
-    z-index: 1;
-    display: none;
-    transition-duration: 1s;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-#scrollToTop:hover{
-    text-decoration:none;
-    background-color: #ff5555;
-    transition-duration: 1s;
-    color: white;
-}
 
 #hellopreloader>p{
   display:none;
@@ -374,57 +419,6 @@ h2 {
   .pict {
     margin: 15% auto;
   }
-}
-
-.schedule{
-  display: block;
-  margin: 10% 10% 10% 5%;
-  text-align: left;
-  font-family: 'hooge05_55Cyr2';
-}
-
-.schedule h1 {
-  color: #8eadad;
-  font-size: 35pt;
-}
-
-.schedule h2 {
-  color: #3baf0b;
-  font-size: 30pt;
-}
-
-.schedule h3 {
-  color: #8eadad  ;
-  font-family: 'Play',sans-serif;
-  font-size: 20pt;
-}
-
-@media screen and (max-device-width: 1024px){
-  .schedule h1 {
-    font-size: 30pt;
-  }
-
-  .schedule h2 {
-    font-size: 25pt;
-  }
-
-  .schedule h3 {
-    font-size: 15pt;
-  }
-}
-
-.partners{
-  position:relative;
-}
-
-.partners_1{
-  display: inline-block;
-  width: auto;
-  max-width:200px;
-  max-height:100px;
-  height:auto;
-  margin: 30px 50px 30px 50px;
-  max-width: 170px;
 }
 
 .fa-angle-double-down {
