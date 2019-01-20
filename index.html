@@ -6,7 +6,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 		<!--Styles-->
-    	<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/mruoss/jquery-scroll-indicator-bullets/2.0.0/dist/jquery.scrollindicatorbullets.css" media="screen">
     	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
     	<link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
     	<link rel="stylesheet" href="fonts/styles.css">
@@ -39,6 +38,23 @@
 		-->
 
 	    <span id="scrollToTop" class="js-scroll-to-top">⇡</span>
+
+	    <!--START Side menu-->
+		<div id="mySidenav" class="sidenav">
+			<a href="#top">Головна</a>
+			<a href="#sec">BEST::HACKath0n</a>
+			<a href="#gallery">Галерея</a>
+			<a href="#">Відос</a>
+			<a href="#">Контакти</a>
+		</div>
+
+		<!-- A button to open the sidenav -->
+		<span id="menuButton" class="menubut m-5" onclick="openNav()" style="z-index: 1;">
+			<div class="ml-auto"></div>
+			<div class="ml-auto"></div>
+			<div class="ml-auto"></div>
+		</span>
+		<!-- END Side menu-->
 
 
 	    <!-- START Main Section-->
@@ -239,11 +255,6 @@
 
 	    <script src="js/jquery-3.3.1.min.js"></script>
 	    <script src="js/bootstrap.bundle.min.js"></script>
-
-	    <!--side indicators of scrolling--> <!--Їх треба забрати і замінити весь скрол на врази менший js (сайт ібеку в допомогу)-->
-	    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
-	    <script src="https://cdn.rawgit.com/imakewebthings/waypoints/4.0.0/lib/noframework.waypoints.min.js"></script>
-	    <script src="https://cdn.rawgit.com/mruoss/jquery-scroll-indicator-bullets/2.0.0/dist/jquery.scrollindicatorbullets.min.js"></script>
 	    
 	    <!--Main JS file-->
 	    <script src="js/index.js"></script>

@@ -56,6 +56,21 @@
 
   // columns
 
+  /* Set the width of the side navigation to 250px */
+function openNav() {
+  if ($('#mySidenav').width() == 0) {
+    document.getElementById("mySidenav").style.width = "300px";
+    $('#menuButton').addClass('closebut');
+  } else {
+    document.getElementById("mySidenav").style.width = "0";
+    $('#menuButton').removeClass('closebut');
+  }
+}
+
+/* Set the width of the side navigation to 0 */
+
+
+
   //opening menu
 
     document.querySelector( "#yes" )
@@ -71,18 +86,24 @@
         });
 
 
-    $(document).ready(function(){
-    $("#body").on("click","a", function (event) {
-      //отменяем стандартную обработку нажатия по ссылке
+$(document).ready(function(){
+  $("#body").on("click","a", function (event) {
+    //отменяем стандартную обработку нажатия по ссылке
 
 
-      //забираем идентификатор бока с атрибута href
-      var id  = $(this).attr('href'),
+    //забираем идентификатор бока с атрибута href
+    var id  = $(this).attr('href'),
 
-      //узнаем высоту от начала страницы до блока на который ссылается якорь
-        top = $(id).offset().top;
+    //узнаем высоту от начала страницы до блока на который ссылается якорь
+      top = $(id).offset().top;
 
-      //анимируем переход на расстояние - top за 1500 мс
-      $('body,html').animate({scrollTop: top}, 1500);
-    });
+    //анимируем переход на расстояние - top за 1500 мс
+    $('body,html').animate({scrollTop: top}, 1500);
   });
+
+
+  $('#mySidenav').find('a').click(function() {
+    document.getElementById("mySidenav").style.width = "0";
+    $('#menuButton').removeClass('closebut');
+  });
+});
