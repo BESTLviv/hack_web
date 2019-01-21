@@ -120,4 +120,83 @@ $(document).ready(function(){
       $(this).find('span').removeClass('invisible');
       clearInterval(interval);
     });
+
+
+    var benia = [0, 0, 1, 1, 1, 1, 1, 0, 0,
+                 0, 1, 0, 0, 1, 0, 0, 1, 0,
+                 1, 1, 1, 0, 1, 1, 0, 1, 1,
+                 1, 1, 1, 1, 1, 1, 1, 1, 1,
+                 1, 1, 1, 1, 1, 1, 1, 1, 1,
+                 1, 0, 1, 0, 1, 0, 1, 0, 1,
+                 2, 2, 2, 2, 2, 2, 2, 2, 2,
+                 2, 2, 2, 2, 2, 2, 2, 2, 2,
+                 2, 2, 2, 2, 2, 2, 2, 2, 2];
+
+    var image1 = [0, 0, 0, 1, 1, 0, 0, 0, 2,
+                  0, 0, 1, 1, 1, 1, 0, 0, 2,
+                  0, 1, 1, 1, 1, 1, 1, 0, 2,
+                  1, 1, 0, 1, 1, 0, 1, 1, 2,
+                  1, 1, 1, 1, 1, 1, 1, 1, 2,
+                  0, 0, 1, 0, 0, 1, 0, 0, 2,
+                  0, 1, 0, 1, 1, 0, 1, 0, 2,
+                  1, 0, 1, 0, 0, 1, 0, 1, 2];         
+
+    var index = 0;
+    var image_index = 0;
+    var width = [225, 200];
+
+    $('.poligon').find('span').each(function() {
+      if (benia[index] == 1) {
+        $(this).css('background-color', '#2ab573');
+        $(this).css('display', 'inline-block');
+
+      } else if (benia[index] == 2) {
+        $(this).css('background-color', 'transparent');
+        $(this).css('display', 'none');
+
+      } else {
+        $(this).css('background-color', 'transparent');
+        $(this).css('display', 'inline-block');
+      }
+
+      index = index + 1;
+    });
+
+
+    $('.poligon').click(function() {
+      image_index = image_index + 1;
+      index = 0;
+
+      var image;
+
+      if (image_index == 2) {
+        image_index = 0;
+        image = benia;
+
+      } else if (image_index == 1) {
+        image = image1;
+      } else {
+        image = benia;
+      }
+
+      $(this).css('left', 'calc(50% - ' + width[image_index]/2 + 'px');
+
+      $(this).find('span').each(function() {
+        if (image[index] == 1) {
+          $(this).css('background-color', '#2ab573');
+          $(this).css('display', 'inline-block');
+
+        } else if (image[index] == 2) {
+          $(this).css('background-color', 'transparent');
+          $(this).css('display', 'none');
+
+        } else {
+          $(this).css('background-color', 'transparent');
+          $(this).css('display', 'inline-block');
+        }
+
+        index = index + 1;
+      });
+
+    });
 });
