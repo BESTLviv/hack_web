@@ -3,38 +3,28 @@
  */
 
 @media screen and (max-width: 767px)  {
-  h2 {
-    font-size: 2.4em !important;
-  }
+  h2 {font-size: 2.4em !important;}
 
-  h3 {
-    font-size: 2em !important;
-  }
+  h3 {font-size: 2em !important;}
 
-  p {
-   font-size: 1.2em !important;
-  }
+  p {font-size: 1.2em !important;}
 
-  .button {
-    font-size: 1.6em !important;
-  }
+  .button {font-size: 1.6em !important;}
+
+  .sidenav {padding-top: 40px !important;}
+
+  .sidenav a {font-size: 1em !important;}
+
+  .button span {display: none;}
 }
 
-body {
-  font-family: 'hooge05_55Cyr2';
-}
+body {font-family: 'hooge05_55Cyr2';}
 
-.light-blue {
-  background-color: #426466;
-}
+.light-blue {background-color: #426466;}
 
-.dark-blue {
-  background-color: #253e49;
-}
+.dark-blue {background-color: #253e49;}
 
-.section {
-  min-height: 100vh;
-}
+.section {min-height: 100vh;}
 
 #top_logo {
   position: absolute;
@@ -43,7 +33,6 @@ body {
   z-index: 1;
   width: 50vh;
 }
-
 
 #scrollToTop {
   padding: 10px;
@@ -125,127 +114,228 @@ p {
   transition: 0.8s;
 }
 
-.network-btn i:hover{
-  color: #3BAF0B;
-}
+.network-btn i:hover{color: #3BAF0B;}
 /**
  * END Buttons
  */
 
 
 /**
- * А тут він закінчується 
+ * START Navigation
  */
-
-
- /* The side navigation menu */
 .sidenav {
-  height: 100%; /* 100% Full-height */
-  width: 0; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
+  height: 100%;
+  width: 0; 
+  position: fixed; 
+  z-index: 2;
+  top: 0;
   right: 0;
-  background-color: #111; /* Black*/
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 80px; /* Place content 60px from the top */
-  transition: 0.4s; /* 0.5 second transition effect to slide in the sidenav */
+  background-color: #111;
+  padding-top: 80px;
+  transition: 0.4s; 
 }
 
-/* The navigation menu links */
 .sidenav a {
   padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-family: 'hooge05_55Cyr2';
-  font-size: 1.5em;
+  font-size: 1.6em;
   display: block;
-  transition: 0.3s;
+  transition: 0.4s;
 }
 
-/* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
-  color: #3BAF0B !important;
-}
+.sidenav a:hover {color: #3BAF0B !important;}
 
-/* Position and style of menu button */
-
-.menubut {
+.menu-btn {
   position: fixed;
   right: 0;
   top: 0;
   cursor: pointer;
+  z-index: 2;
 }
 
-.menubut div {
+.menu-btn div {
   width: 36px;
   height: 2px;
   margin-bottom: 10px;
   background-color: #3BAF0B;
   transition: 0.4s;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.menubut div:nth-of-type(3) {
+.menu-btn div:nth-of-type(1) {width: 28px;}
+
+.menu-btn div:nth-of-type(2) {width: 12px;}
+
+.menu-btn div:nth-of-type(3) {
   width: 20px;
   margin-bottom: 0px;
 }
 
-.menubut div:nth-of-type(2) {
-  width: 12px;
-}
-
-.menubut div:nth-of-type(1) {
-  width: 28px;
-}
-
-.menubut:hover div {
+.menu-btn:hover div {
   width: 36px;
   transition: 0.4s;
 }
 
-.closebut div {
+.close-btn div {
   width: 36px !important;
   background-color: white;
 }
 
-.closebut div:nth-of-type(1) {
-  transform: translate(0, 12px) rotate(45deg);
+.close-btn div:nth-of-type(1) {transform: translate(0, 12px) rotate(45deg);}
+
+.close-btn div:nth-of-type(2) {opacity: 0;}
+
+.close-btn div:nth-of-type(3) {transform: translate(0, -12px) rotate(-45deg);}
+
+.close-btn:hover div {background-color: #3BAF0B;}
+/**
+ * END Navigation
+ */
+
+
+.arrow-down {
+  position: absolute;
+  width: 64px;
+  height: 30px;
+  top: 80vh;
+  left: calc(50% - 32px);
+  z-index: 1;
+  cursor: pointer;
 }
 
-.closebut div:nth-of-type(2) {
-  opacity: 0;
+.arrow-down div {
+  position: absolute;
+  top: 0px;
+  width: 32px;
+  height: 4px;
+  background-color: white;
+  transition: 0.8s;
 }
 
-.closebut div:nth-of-type(3) {
-  transform: translate(0, -12px) rotate(-45deg);
+.arrow-down:hover div {
+  background-color: #3BAF0B;
+  transition: 0.8s;
 }
 
-.closebut:hover div {
+.arrow-down div:nth-of-type(1), .arrow-down div:nth-of-type(3) {
+  transform: translate(6px, 15px) rotate(45deg);
+}
+
+.arrow-down div:nth-of-type(2), .arrow-down div:nth-of-type(4) {
+  transform: translate(-6px, 15px) rotate(-45deg);
+  right: 0;
+}
+
+.arrow-down:hover div:nth-of-type(3), .arrow-down:hover div:nth-of-type(4) {
+  top: 16px;
+  transition: 0.8s;
+} 
+
+.gallery-img {width: 60%;}  
+
+::-webkit-scrollbar {
+    width: 4px;
+    background-color: #111;
+}
+
+::-webkit-scrollbar-thumb {
   background-color: #3BAF0B;
 }
 
+/**
+ * START Window
+ */
+.window {
+  position: relative;
+  height: 50%;
+  width: 80%;
+  background-color: #253e49;
+  /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+}
 
-/* Position and style the close button (top right corner) */
-.sidenav .closebtn {
+.window > div {
   position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.window .button {
+  font-size: 1.6em;
+  padding: 8px 32px;
+}
+
+.window-text {
+  color: #253E49;
+  margin-bottom: 0;
+  font-weight: 600;
+}
+
+.bar {
+  position: relative;
+  height: 34px;
+  width: 100%;
+  background-color: #3BAF0B;
+  border: 2px solid white;
+  border-bottom: none;
+  border-radius: 100px 100px 0px 0px;
+}
+
+.bar-header {
+  position: absolute;
+  left: 32px;
+  top: 3px;
+  font-size: 1.4em;
+  color: #253E49;
+}
+
+.fa-arrow-left {
+  margin: 0px 8px 1px 0px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.points {
+  height: 32px;
+  width: auto;
+  position: absolute;
+  right: 16px;
   top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
 }
 
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-#main {
-  transition: margin-left .5s;
-  padding: 20px;
+.points span {
+  margin: 8px 8px 0px 0px;
+  height: 16px;
+  width: 16px;
+  border-radius: 100%;
+  background: #253E49;
+  display: inline-block;
 }
 
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+.points span:nth-of-type(1) {background-color: white;}
+
+.content {
+  width: 100%;
+  height: calc(100% - 34px);
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-/*END*/
+.content input {
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  border-bottom: 2px solid #3BAF0B;
+  outline: none;
+  font-size: 1.6em;
+}
+/**
+ *END Window
+ */
+
+/**
+ * А тут він закінчується 
+ */
+
+
 
 a {
     color:white!important;
@@ -253,22 +343,6 @@ a {
 
 a:hover {
     text-decoration: none!important;
-}
-
-
-@media only screen and (max-width: 768px) {
-  .pict img {
-  height: auto!important;
-  width: 75vw!important;
-  }
-
-  #cont .window p {
-    font-size: 1em!important;
-  }
-
-  #cont .window .point {
-    margin-top: 3px!important;
-  }
 }
 
 
@@ -286,256 +360,4 @@ a:hover {
   min-width: 200px;
   background: #253e49 url(http://hello-site.ru//main/images/preloads/ball-triangle.svg) center center no-repeat;
   background-size:109px;
-}
-
-
-#gal {
-  text-align: center;
-}
-
-.window {
-  height: 50%;
-  width: 80%;
-  background-color: #253E49;
-}
-
-@media screen and (max-device-width: 426px) {
-  .window {
-    margin: 25% auto;
-  }
-}
-
-.bar {
-  width: 100%;
-  background: #3BAF0B;
-  border: 2px solid;
-  border-color: white;
-  border-top-left-radius: 100px;
-  border-top-right-radius: 100px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.bar p {
-  margin: 1px 5%;
-  font-family: 'hooge05_55Cyr2';
-  font-size: 15pt;
-  display: inline-block;
-}
-
-.point {
-  height: 15px;
-  width: 15px;
-  border-radius: 100px;
-  background: #253E49;
-  display: inline-block;
-  float: right;
-  margin-right: 10px;
-  margin-top: 7px;
-}
-
-.firstp {
-  margin-right: 25px
-}
-
-.thirdp {
-  background-color: white;
-}
-
-.content {
-  width: 100%;
-  height: 92%;
-  min-height: 300px;
-  background-color: white;
-  text-align: center;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-#question {
-  position: relative;
-  top: 0px;
-  left: 0px;
-}
-
-#question.active{
-  display: none;
-}
-
-.content .text p {
-  display: inline-block;
-  font-family: 'Play',sans-serif;
-  font-weight: bold;
-  font-size: 25pt;
-  color: #3BAF0B;
-  margin: 0% auto 0px ;
-  padding: 5% 0px;
-  text-align: justify;
-}
-
-.text img {
-  position: relative;
-  left: 0px;
-  top: -15px;
-}
-.no {
-  padding: 10px 53px;
-}
-
-@media screen and (max-device-width: 1025px) {
-  .content .text p {
-    margin: auto;
-  }
-  .text img {
-    top: 0px;
-  }
-}
-
-@media screen and (max-device-width: 770px) {
-  .content .text p {
-    font-size: 10pt;
-  }
-}
-
-#ifyes {
-  width: 100%;
-  height: 100%;
-  display: none;
-  position: relative;
-  top: 0px;
-  left: 0px;
-  z-index: 99;
-  font-family: 'hooge05_55Cyr2';
-  margin: 0px auto;
-  padding: 10px 0px 0px;
-  color: #253E49;
-}
-
-#ifyes h2{
-  font-size: 92pt;
-  margin: -5px;
-  display: inline-block;
-}
-
-#ifyes h3 {
-  margin: -20px;
-  font-size: 40pt;
-}
-
-#ifyes h4 {
-  color: #3BAF0B;
-  font-size: 28pt;
-}
-
-#ifyes a{
-  text-decoration: none;
-}
-
-@media screen and (max-device-width: 376px) {
-  #ifyes h2{
-    font-size: 88pt;
-  }
-
-  #ifyes h3 {
-    font-size: 38pt;
-  }
-
-  #ifyes h4 {
-    font-size: 27pt;
-  }
-}
-
-@media screen and (max-device-width: 376px) {
-  #ifyes h2{
-    font-size: 76pt;
-  }
-
-  #ifyes h3 {
-    font-size: 33pt;
-  }
-
-  #ifyes h4 {
-    font-size: 23pt;
-  }
-}
-
-#ifno {
-  width: 100%;
-  height: 100%;
-  display: none;
-  position: relative;
-  top: 0px;
-  left: 0px;
-  z-index: 99;
-  padding: 10%;
-  font-size: 18pt;
-  text-align: left;
-  font-family: 'Play',sans-serif;
-}
-
-#ifno h2 {
-  display: inline-block;
-  color: #3BAF0B;
-  font-size: 30pt;
-  margin-top: 0px;
-}
-
-@media screen and (max-device-width: 770px) {
-  #ifno {
-    font-size: 10pt;
-  }
-  #ifno h2 {
-    font-size: 10pt;
-  }
-}
-
-#ifno.active {
-  display: block;
-}
-
-#ifyes.active {
-  display: block;
-}
-
-#cont .window {
-  margin-top: 5%;
-  height: 80%;
-}
-
-#cont .window p{
-  font-size: 20pt;
-}
-
-#cont .window .point{
-  margin-top: 12px;
-}
-
-.pict {
-  width: 90%;
-  margin: 5% auto;
-  text-align: center;
-}
-
-.pict img {
-  height: 60vh;
-}
-
-@media screen and (max-device-width: 321px) {
-  .pict img {
-    height: 60vh;
-    margin-top: 15vh;
-  }
-}
-
-@media screen and (max-device-width: 426px) {
-  .pict {
-    margin: 15% auto;
-  }
-}
-
-.fa-angle-double-down {
-  position: absolute;
-  top: 85vh;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
-  color: white;
 }

@@ -17,7 +17,7 @@
       	<link rel="stylesheet" type="text/css" href="css/style.css">
 
     	<!--Font-awesome:         -->
-    	<script src="https://use.fontawesome.com/f722cd8311.js"></script>
+    	<script src="js/all.js"></script>
 
     	<!-- Global site tag (gtag.js) - Google Analytics -->
     	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-38764566-3"></script>
@@ -29,7 +29,7 @@
       	</script>
     </head>
 
-    <body style="overflow-x: hidden" id="body">
+    <body>
 
     	<!--Тут є прелоадер, поки залишаємо
 	    <div id="hellopreloader">
@@ -49,7 +49,7 @@
 		</div>
 
 		<!-- A button to open the sidenav -->
-		<span id="menuButton" class="menubut m-5" onclick="openNav()" style="z-index: 1;">
+		<span id="menuButton" class="menu-btn m-md-5 m-3" onclick="openNav()">
 			<div class="ml-auto"></div>
 			<div class="ml-auto"></div>
 			<div class="ml-auto"></div>
@@ -59,24 +59,29 @@
 
 	    <!-- START Main Section-->
 	    <div class="container-fluid px-0">
-	    	<div id="top" class="row scroll-section">
+	    	<div id="top" class="row mx-0">
             	<img id="top_logo" src="images/blocks/logo.png" alt="BEST::HACKath0n logo"/>
 
             	<div class="col-lg-6 section light-blue d-flex justify-content-center align-items-center flex-column pt-lg-0 pt-5">
             		<div>
-	            		<a class="button dark-blue" href="http://hack.best-lviv.org.ua/console">Geek version</a>
+	            		<a class="button dark-blue" href="http://hack.best-lviv.org.ua/console">Geek version<span>_</span></a>
 	            	</div>
               		<div class="d-lg-none mt-5">
-              			<a class="button dark-blue" href="#sec">Slide down</a>
+              			<a class="button dark-blue" href="#sec">Slide down<span>_</span></a>
               		</div>
             	</div>
 
             	<div class="col-lg-6 section dark-blue d-none d-lg-flex justify-content-center align-items-center">
             		<div>
-            			<a class="button light-blue" href="#sec">Slide down</a>
+            			<a class="button light-blue" href="#sec">Slide down<span>_</span></a>
             		</div>
             	</div>
-            	<a href="#sec"><i class="fa fa-angle-double-down" aria-hidden="true" style="font-size: 60pt"></i></a>
+            	<div class="arrow-down">
+            		<div></div>
+            		<div></div>
+            		<div></div>
+            		<div></div>
+            	</div>
         	</div>
 	    </div>
 	    <!-- END Main Section-->
@@ -84,41 +89,67 @@
 
 	    <!--START About Section-->
 	    <div class="container-fluid px-0">
-	    	<div id="sec" class="row scroll-section">
+	    	<div id="sec" class="row mx-0">
 	            <div id="#do_you" class="col-lg-6 section dark-blue d-flex justify-content-center align-items-center">
-		            <div class="window">
-		                <div class="bar">
-		                	<p>BEST HACKATHON</p>
-		                	<div class="point firstp"></div>
-		                	<div class="point secondp"></div>
-		                	<div class="point thirdp"></div>
-		                </div>
-		                <div class="content">
-			                <div id="ifno">
-			                	<h2>Hackathon</h2> - це захід,
-			                	на який збираються розробники, дизайнери, інженери,
-			                	щоб за обмежений час в режимі інтенсиву та командної роботи,
-			                	створити та презентувати свій проект
-			                </div>
-			                <div id="ifyes">
-			                    <h2>BEST</h2>
-			                    <h3>HACKATHON</h3>
-			                    <h4>7-9 ЖОВТНЯ 2017</h4>
-			                    <a href="#sched">
-			                    	<div class="button dark-blue">РОЗКЛАД</div>
-			                    </a>
-			                </div>
-			                <div id="question">
-			                    <div class="text">
-			                      	<img src="images/blocks/benia.png" alt="">
-			                      	<p>А ти знаєш, що таке<br>BEST::HACKathon?</p>
-			                    </div>
-			                    <div id="yes" class="button dark-blue">Так</div>
-			                    <div id="no" class="button dark-blue">Ні</div>
-			                </div>
-		                </div>
+		            <div class="window">		        
+		            	<div id="window_main">
+		            		<div class="bar">
+		            			<h3 class="bar-header">BEST::HACKathon</h3>
+		            			<div class="points">
+			            			<span></span>
+			            			<span></span>
+			            			<span></span>
+		            			</div>
+		            		</div>
+		            		<div class="content">
+		            			<div class="row p-5">
+		            				<div class="col-3 d-flex align-items-center justify-content-center">
+		            					<img src="images/blocks/benia-logo.png" class="img-fluid w-100"/>
+		            				</div>
+		            				<div class="col-9">
+		            					<p class="window-text">А ти знаєш, що таке<br/>BEST::HACKathon?</p>
+		            				</div>
+		            				<div class="col-12 mt-4">
+		            					<p to="window_reg" from="window_main" class="window-button button dark-blue mr-4">Так<span>_</span></p>
+		            					<p to="window_about" from="window_main" class="button window-button dark-blue">Ні<span>_</span></p>
+		            				</div>
+		            			</div>
+		            		</div>
+		            	</div>
+
+		            	<div id="window_about" style="display: none;">
+		            		<div class="bar">
+		            			<h3 class="bar-header"><i to="window_main" from="window_about" class="fas fa-arrow-left window-button"></i> about</h3>
+		            			<div class="points">
+			            			<span></span>
+			            			<span></span>
+			            			<span></span>
+		            			</div>
+		            		</div>
+		            		<div class="content px-5 pt-4">
+		            			<p class="window-text mb-4">Hackathon - це захід, на який збираються розробники, дизайнери, інженери, щоб за обмежений час в режимі інтенсиву та командної роботи, створити та презентувати свій проект</p>
+		            			<p to="window_reg" from="window_about" class="window-button button dark-blue">Зареєструватись<span>_</span></p>
+		            		</div>
+		            	</div>
+
+		            	<div id="window_reg" style="display: none;">
+		            		<div class="bar">
+		            			<h3 class="bar-header"><i to="window_main" from="window_reg" class="fas fa-arrow-left window-button"></i> registration</h3>
+		            			<div class="points">
+			            			<span></span>
+			            			<span></span>
+			            			<span></span>
+		            			</div>
+		            		</div>
+		            		<div class="content px-5 pt-4">
+		            			<p class="window-text mb-2">Попередня реєстрація:</p>
+		            			<input type="email" name="emailreg" class="mb-4" placeholder="ввести email" />
+		            			<p class="button dark-blue">Надіслати email<span>_</span></p>
+		            		</div>
+		            	</div>
 		            </div>
 	            </div>
+
 	            <div class="col-lg-6 section light-blue">
 	            	<h2>Тут буде інфа про тему</h2>
 	            </div>
@@ -129,7 +160,7 @@
 
 	    <!--START Gallery, Schedule Section-->
 	    <div class="container-fluid px-0">
-	    	<div id="gallery" class="row scroll-section">
+	    	<div id="gallery" class="row mx-0">
 	    		<div class="col-lg-6 order-lg-1 section dark-blue">
 	              	<div class="p-md-5 p-4">
 	              		<h2>РОЗКЛАД</h2>
@@ -144,12 +175,10 @@
 	          		</div>
 	            </div>
 
-            	<div id="gal" class="col-lg-6 section light-blue">
-	              	<div class="pict">
-	                	<img src="images/blocks/galler.png" alt="">
-	              	</div>
-	            	<div class="button dark-blue">
-	            		<a href="https://www.flickr.com/photos/best_lviv/albums/72157668244164751" target="_blank">ГАЛЕРЕЯ</a>
+            	<div class="col-lg-6 section light-blue d-flex justify-content-center align-items-center flex-column">
+					<img src="images/blocks/galler.png" class="img-fluid gallery-img mb-5" alt="">
+	            	<div>
+	            		<a class="button dark-blue" href="https://www.flickr.com/photos/best_lviv/albums/72157668244164751" target="_blank">ГАЛЕРЕЯ<span>_</span></a>
 	            	</div>
             	</div>
 
@@ -166,66 +195,64 @@
 
 
 	    <!--START Partners Section-->
-	    <div class="container-fluid px-0">
-	    	<div class="col-xs-12 py-5">
-        		<h2 class="w-100 text-center">МИНУЛОРІЧНІ ПАРТНЕРИ:</h2>
+	    <div class="container-fluid py-5 px-0">
+    		<h2 class="w-100 text-center">МИНУЛОРІЧНІ ПАРТНЕРИ:</h2>
 
-              	<div class="row d-flex justify-content-center align-items-center">
-          			<a href="https://tickets.ua/" target="_blank">
-          				<img src="images/partners/tickets.png" alt="Tickets" class="partners_1">
-          			</a>
-          			<a href="https://www.infopulse.com/" target="_blank">
-          				<img src="images/partners/infopulse.png" alt="Infopulse" class="partners_1">
-          			</a>
-		  			<a href="https://www.impulsis.com/ua/" target="_blank">
-		  				<img src="images/partners/impulsis.png" alt="Impulsis" class="partners_1">
-		  			</a>
-		  			<a href="https://www.shadowmastersgames.com/" target="_blank">
-		  				<img src="images/partners/shad.png" alt="Shadow Masters" class="partners_1">
-		  			</a>
-		  			<a href="https://incode-it.com/" target="_blank">
-		  				<img src="images/partners/incode.png" alt="Incode" class="partners_1">
-		  			</a>
-		  			<a href="https://dataart.ua/" target="_blank">
-		  				<img src="images/partners/dataart.gif" alt="Data Art" class="partners_1">
-		  			</a>
-		  			<a href="https://eleks.com/" target="_blank">
-		  				<img src="images/partners/ELEKS.png" alt="Eleks" class="partners_1">
-		  			</a>
-		  			<a href="http://ralabs.org/" target="_blank">
-		  				<img src="images/partners/ralabs.png" alt="Ralabs" class="partners_1">
-		  			</a>
-		  			<a href="http://ukraine.cursor.education/course/web-ui-basic" target="_blank">
-		  				<img src="images/partners/cursor.png" alt="Cursor" class="partners_1">
-		  			</a>
-		  			<a href="http://www.symphony-solutions.eu/" target="_blank">
-		  				<img src="images/partners/symphony-solutions_logo.png" alt="Symphony Solutions" class="partners_1">
-		  			</a>
-		  			<a href="http://black.ua/" target="_blank">
-		  				<img src="images/partners/Black_LOGO_41.png" alt="Black Energy drink" class="partners_1">
-		  			</a>
-		  			<a href="https://multiplex.ua/" target="_blank">
-		  				<img src="images/partners/multiplex.svg" alt="MULTIPLEX" class="partners_1">
-		  			</a>
-		  			<a href="http://rk-ukraina.com/intersport-lv" target="_blank">
-		  				<img src="images/partners/intersport.jpeg" alt="Intersport" class="partners_1">
-		  			</a>
-		  			<a href="http://www.pridebikes.com/" target="_blank">
-		  				<img src="images/partners/Pride.png" alt="Львівська міська рада" class="partners_1">
-		  			</a>
-              	</div>
+          	<div class="row d-flex justify-content-center align-items-center mx-0">
+      			<a href="https://tickets.ua/" target="_blank">
+      				<img src="images/partners/tickets.png" alt="Tickets" class="partners_1">
+      			</a>
+      			<a href="https://www.infopulse.com/" target="_blank">
+      				<img src="images/partners/infopulse.png" alt="Infopulse" class="partners_1">
+      			</a>
+	  			<a href="https://www.impulsis.com/ua/" target="_blank">
+	  				<img src="images/partners/impulsis.png" alt="Impulsis" class="partners_1">
+	  			</a>
+	  			<a href="https://www.shadowmastersgames.com/" target="_blank">
+	  				<img src="images/partners/shad.png" alt="Shadow Masters" class="partners_1">
+	  			</a>
+	  			<a href="https://incode-it.com/" target="_blank">
+	  				<img src="images/partners/incode.png" alt="Incode" class="partners_1">
+	  			</a>
+	  			<a href="https://dataart.ua/" target="_blank">
+	  				<img src="images/partners/dataart.gif" alt="Data Art" class="partners_1">
+	  			</a>
+	  			<a href="https://eleks.com/" target="_blank">
+	  				<img src="images/partners/ELEKS.png" alt="Eleks" class="partners_1">
+	  			</a>
+	  			<a href="http://ralabs.org/" target="_blank">
+	  				<img src="images/partners/ralabs.png" alt="Ralabs" class="partners_1">
+	  			</a>
+	  			<a href="http://ukraine.cursor.education/course/web-ui-basic" target="_blank">
+	  				<img src="images/partners/cursor.png" alt="Cursor" class="partners_1">
+	  			</a>
+	  			<a href="http://www.symphony-solutions.eu/" target="_blank">
+	  				<img src="images/partners/symphony-solutions_logo.png" alt="Symphony Solutions" class="partners_1">
+	  			</a>
+	  			<a href="http://black.ua/" target="_blank">
+	  				<img src="images/partners/Black_LOGO_41.png" alt="Black Energy drink" class="partners_1">
+	  			</a>
+	  			<a href="https://multiplex.ua/" target="_blank">
+	  				<img src="images/partners/multiplex.svg" alt="MULTIPLEX" class="partners_1">
+	  			</a>
+	  			<a href="http://rk-ukraina.com/intersport-lv" target="_blank">
+	  				<img src="images/partners/intersport.jpeg" alt="Intersport" class="partners_1">
+	  			</a>
+	  			<a href="http://www.pridebikes.com/" target="_blank">
+	  				<img src="images/partners/Pride.png" alt="Львівська міська рада" class="partners_1">
+	  			</a>
+          	</div>
 
-              	<div class="w-100 pt-5" style="text-align: center;">
-              		<div class="button dark-blue">СТАТИ ПАРТНЕРОМ</div>
-              	</div>
-        	</div>
+          	<div class="w-100 pt-5" style="text-align: center;">
+          		<div class="button dark-blue">СТАТИ ПАРТНЕРОМ<span>_</span></div>
+          	</div>
 	    </div>
 	    <!--END Partners Section-->
 
 
 	    <!--START Contacts Section-->
 	    <div class="container-fluid px-0">
-	    	<div class="row">
+	    	<div class="row mx-0">
             	<div class="col-12 section dark-blue d-flex justify-content-center align-items-center">
 		            <div class="window">
 		                <div class="bar">
