@@ -364,7 +364,7 @@ p {
   width: 25px;
   background-color: transparent;
   display: inline-block;
-  transition: 1.6s;
+  transition: 0.8s;
 }
 /**
  *END Poligon
@@ -403,11 +403,12 @@ a:hover {
 
 .glitch {
   color: white;
+  font-size: 100px;
   position: absolute;
-  font-size: 3em;
-  top: 60vh;
-  left: 50%;
-  transform: translateX(-50%);
+  width: 400px;
+  margin: 0 auto;
+  top: 50vh;
+  left: 40vw;
   z-index: 1000;
 }
 
