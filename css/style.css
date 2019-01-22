@@ -60,6 +60,20 @@ body {font-family: 'hooge05_55Cyr2';}
   margin: 32px;
 }
 
+input {
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  border-bottom: 2px solid #3BAF0B;
+  outline: none;
+  font-size: 2.4em;
+  background-color: transparent;
+  color: #3BAF0B;
+}
+
+::placeholder {
+  color: #8eadad;
+}
 
 /**
  * START Text
@@ -88,8 +102,8 @@ p {
  * START Buttons
  */
 .button {
-  display: inline;
-  padding: 8px 40px;
+  display: inline-block;
+  padding: 0px 40px;
   border-radius: 16px;
   font-family: 'hooge05_55Cyr2';
   font-size: 2.4em;
@@ -104,17 +118,13 @@ p {
 }
 
 .network-btn {
-  background-color: #FFF !important;
-  box-shadow: none !important;
-}
-
-.network-btn i {
   color: #253E49;
-  margin: 36px 16px;
+  margin: 36px;
   transition: 0.8s;
+  font-size: 3em;
 }
 
-.network-btn i:hover{color: #3BAF0B;}
+.network-btn:hover {color: #3BAF0B;}
 /**
  * END Buttons
  */
@@ -246,21 +256,21 @@ p {
  */
 .window {
   position: relative;
-  height: 50%;
-  width: 80%;
-  background-color: #253e49;
+  width: 100%;
+  height: 100%;
   /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
 }
 
 .window > div {
   position: absolute;
-  height: 100%;
-  width: 100%;
+  min-height: 50%;
+  width: 80%;
+  background-color: transparent;
 }
 
 .window .button {
   font-size: 1.6em;
-  padding: 8px 32px;
+  padding: 0px 32px;
 }
 
 .window-text {
@@ -319,14 +329,6 @@ p {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.content input {
-  border-left: none;
-  border-top: none;
-  border-right: none;
-  border-bottom: 2px solid #3BAF0B;
-  outline: none;
-  font-size: 1.6em;
-}
 /**
  *END Window
  */
@@ -377,11 +379,12 @@ p {
 
 
 a {
-    color:white!important;
+    color:white;
     text-decoration: none!important; }
 
 a:hover {
     text-decoration: none!important;
+    color: white;
 }
 
 
@@ -401,7 +404,7 @@ a:hover {
   background-size:109px;
 }
 
-.glitch {
+.main-glitch {
   color: white;
   position: absolute;
   font-size: 3em;

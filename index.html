@@ -92,7 +92,7 @@
             		</div>
             	</div>
 
-				<div class="glitch" data-text="BEST IT">HACK IT</div> 
+				<div class="main-glitch glitch" data-text="BEST IT">HACK IT</div> 
 
             	<div class="col-lg-6 section light-blue d-flex justify-content-center align-items-center flex-column pt-lg-0 pt-5">
             		<div>
@@ -122,8 +122,8 @@
 	    <!--START About Section-->
 	    <div class="container-fluid px-0">
 	    	<div id="sec" class="row mx-0">
-	            <div id="#do_you" class="col-lg-6 section dark-blue d-flex justify-content-center align-items-center">
-		            <div class="window">		        
+	            <div id="#do_you" class="col-lg-6 section dark-blue">
+		            <div class="window d-flex justify-content-center align-items-center">		        
 		            	<div id="window_main">
 		            		<div class="bar">
 		            			<h3 class="bar-header">BEST::HACKathon</h3>
@@ -134,16 +134,15 @@
 		            			</div>
 		            		</div>
 		            		<div class="content">
-		            			<div class="row p-5">
+		            			<div class="row px-5 py-4">
 		            				<div class="col-3 d-flex align-items-center justify-content-center">
 		            					<img src="images/blocks/benia-logo.png" class="img-fluid w-100"/>
 		            				</div>
 		            				<div class="col-9">
-		            					<p class="window-text">А ти знаєш, що таке<br/>BEST::HACKathon?</p>
+		            					<p class="window-text">// BEST::HACKathon<br/>// Команда з 3-5 осіб<br/>// м. Львів<br/>// Травень 2019 року<br/>// Відкрита пререєстрація</p>
 		            				</div>
 		            				<div class="col-12 mt-4">
-		            					<p to="window_reg" from="window_main" class="window-button button dark-blue mr-4">Так<span>_</span></p>
-		            					<p to="window_about" from="window_main" class="button window-button dark-blue">Ні<span>_</span></p>
+		            					<p to="window_about" from="window_main" class="window-button button dark-blue w-100 text-center">детальніше<span>_</span></p>
 		            				</div>
 		            			</div>
 		            		</div>
@@ -158,32 +157,20 @@
 			            			<span></span>
 		            			</div>
 		            		</div>
-		            		<div class="content px-5 pt-4">
-		            			<p class="window-text mb-4">Hackathon - це захід, на який збираються розробники, дизайнери, інженери, щоб за обмежений час в режимі інтенсиву та командної роботи, створити та презентувати свій проект</p>
-		            			<p to="window_reg" from="window_about" class="window-button button dark-blue">Зареєструватись<span>_</span></p>
-		            		</div>
-		            	</div>
-
-		            	<div id="window_reg" style="display: none;">
-		            		<div class="bar">
-		            			<h3 class="bar-header"><i to="window_main" from="window_reg" class="fas fa-arrow-left window-button"></i> registration</h3>
-		            			<div class="points">
-			            			<span></span>
-			            			<span></span>
-			            			<span></span>
-		            			</div>
-		            		</div>
-		            		<div class="content px-5 pt-4">
-		            			<p class="window-text mb-2">Попередня реєстрація:</p>
-		            			<input type="email" name="emailreg" class="mb-4" placeholder="ввести email" />
-		            			<p class="button dark-blue">Надіслати email<span>_</span></p>
+		            		<div class="content px-5 py-4">
+		            			<p class="window-text mb-4">/**<br/><span class="invisible">/</span>* Hackathon - це захід, на який<br/><span class="invisible">/</span>* збираються розробники, дизайнери,<br/><span class="invisible">/</span>* інженери, щоб за обмежений час<br/><span class="invisible">/</span>* в режимі інтенсиву та командної<br/><span class="invisible">/</span>* роботи, створити та презентувати<br/><span class="invisible">/</span>* свій проект<br/><span class="invisible">/</span>**/</p>
+		            			<p id="reg_glitch_button" class="button dark-blue w-100 text-center">Як зареєструватись?<span>_</span></p>
 		            		</div>
 		            	</div>
 		            </div>
 	            </div>
 
-	            <div class="col-lg-6 section light-blue">
-	            	<h2>Тут буде інфа про тему</h2>
+	            <div class="col-lg-6 section light-blue p-5">
+	            	<h2 id="reg_header" class="position-relative" data-text="Пререєстрація">Пререєстрація</h2>
+	            	<h3 class="w-100 text-center">Що це?</h3>
+	            	<p>Пререєстрація - попередня реєстрація на проект, збір електронних пошт учасників. В день відкриття основної реєстрації на проект учасникам будуть надіслані електронні лист з детальною інформацією про реєстрацію на пошту, яку вони вказали під час пререєстрації.</p>
+	            	<input class="mt-4" type="email" name="email_reg" placeholder="Ввести електронну пошту" />
+	            	<p class="button dark-blue mt-4">Зареєструватись<span>_</span></p>
 	            </div>
           	</div>
 	    </div>
@@ -193,18 +180,11 @@
 	    <!--START Gallery, Schedule Section-->
 	    <div class="container-fluid px-0">
 	    	<div id="gallery" class="row mx-0">
-	    		<div class="col-lg-6 order-lg-1 section dark-blue">
-	              	<div class="p-md-5 p-4">
-	              		<h2>РОЗКЛАД</h2>
-	              		<h3 class="w-100 text-center">7 жовтня</h3>
-	              		<p>10:00 - 11:00 представлення партнерів</p>
-	              		<p>11:00 - 12:00 початок змагань</p>
-	              		<p>15:00 - 16:00 обід</p>
-	              		<p>21:00 - 22:00 вечеря</p>
-	              		<h3 class="w-100 text-center">8 жовтня</h3>
-	              		<p>8:00 - 9:00 сніданок</p>
-	              		<p>12:00 презентації команд</p> 
-	          		</div>
+	    		<div class="col-lg-6 order-lg-1 section dark-blue p-md-5 p-4">
+	              	<h2>організатор проекту</h2>
+	              	<h3 class="w-100 text-center">BEST Lviv</h3>
+	              	<p>BEST (Board of European Students of Technology) або Рада студентів технічних університетів – неприбуткова, неполітична та нерелігійна організація, яка представлена у 97 осередках 34 країн світу. З 1989 року BEST забезпечує обмін знаннями та співробітництво між студентами, компаніями та університетами на теренах Європи.<br/><br/>BEST Lviv діє при Національному університеті "Львівська політехніка".</p>
+	              	<a href="http://best-lviv.org.ua/" class="button light-blue mt-4" target="_blank">Дізнатись більше<span>_</span></a>
 	            </div>
 
             	<div class="col-lg-6 section light-blue d-flex justify-content-center align-items-center flex-column">
@@ -286,25 +266,44 @@
 	    <div class="container-fluid px-0">
 	    	<div class="row mx-0">
             	<div class="col-12 section dark-blue d-flex justify-content-center align-items-center">
-		            <div class="window">
-		                <div class="bar">
-			                <p>ЗВ'ЯЗАТИСЬ З НАМИ</p>
-			                <div class="point firstp"></div>
-			                <div class="point secondp"></div>
-			                <div class="point thirdp"></div>
-		                </div>
-		                <div class="content">
-			                <div class="button dark-blue" style="position: relative; top:40%; font-family: &#39;Play&#39;,monospace;">
-			                	<a href="mailto:hack@best-lviv.org.ua">hack@best-lviv.org.ua</a>
-			                </div>
-			                <br>
-			                <div class="button network-btn" style="position: relative; top:40%; font-family: &#39;Play&#39;,monospace;">
-			                	<a href="https://www.facebook.com/best.hackathon/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-			                </div>
-			                <div class="button network-btn" style="position: relative; top:40%; font-family: &#39;Play&#39;,monospace;">
-			                	<a href="https://twitter.com/BEST_HACKathon"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-			                </div>
-		                </div>
+		            <div class="window d-flex justify-content-center align-items-center">		        
+		            	<div>
+		            		<div class="bar">
+		            			<h3 class="bar-header">Зв'язатись з нами</h3>
+		            			<div class="points">
+			            			<span></span>
+			            			<span></span>
+			            			<span></span>
+		            			</div>
+		            		</div>
+		            		<div class="content">
+		            			<div class="row px-5 py-4">
+		            				<div class="col-7 d-flex align-items-start">
+		            					<p class="window-text mr-3">Тел.<span style="color: white;">ес.</span> </p>
+		            					<p class="window-text">+38 (097) 583 8098<br/>+38 (097) 583 8098</p>
+		            				</div>
+		            				<div class="col-5">
+		            					<p class="window-text">E-mail:<br/></p>
+		            					<p class="window-text">hack@best-lviv.org.ua</p>
+		            				</div>
+		            				<div class="col-7 mt-4 d-flex align-items-start">
+		            					<p class="window-text mr-3">Адреса</p>
+		            					<p class="window-text" style="font-size: 1.2em;">Національний університет "Львівська політехніка"<br/>Україна 79013, Львів, вул. Степана Бандери 12/235</p>
+		            				</div>
+		            				<div class="col-5 mt-4">
+		            					<p class="button dark-blue">Надіслати лист<span>_</span></p>
+		            				</div>
+		            				<div class="col-12 mt-4 text-center">
+		            					<a href="https://www.facebook.com/best.hackathon/" class="network-btn"><i class="fab fa-facebook-square"></i></a>
+		            					<a href="https://www.youtube.com/channel/UCgJ3hwP5MBKe4F2e6DLe9nA" class="network-btn"><i class="fab fa-youtube"></i></a>
+		            					<a href="https://www.instagram.com/best_lviv/" class="network-btn"><i class="fab fa-instagram"></i></a>
+		            				</div>
+		            				<div class="col-12 mt-4">
+		            					<p class="w-100 text-center">© 2019 BEST Lviv. All Rights Reserved.</p>
+		            				</div>
+		            			</div>
+		            		</div>
+		            	</div>
 		            </div>
 	            </div>
           	</div>

@@ -84,6 +84,13 @@ $(document).ready(function(){
     $('#menuButton').removeClass('close-btn');
   });
 
+  $('#reg_glitch_button').click(function() {
+    $('#reg_header').addClass('glitch');
+    setTimeout(function() {
+      $('#reg_header').removeClass('glitch');
+    }, 5000);
+  });
+
 });
 
 
@@ -426,7 +433,38 @@ $(document).ready(function(){
 
     var image;
 
-    $('.poligon').click(function() {
+    function changes() {
+      for (var t = 0; t < 81; t++) {
+        setTimeout(function() {
+          $number = Math.floor(Math.random() * 81);
+
+          elem = $('.poligon').find('span').eq($number);
+
+
+          if (elem.css('background-color') != 'rgba(0, 0, 0, 0)') {
+            var opacity = Math.floor((Math.random() * 100) + 40);
+            elem.css('opacity', opacity/100);
+
+            var color = Math.floor(Math.random() * 10 + 1);
+
+            if (color > 2) {
+              elem.css('background-color', '#2ab573');
+            } else if (color == 2) {
+              elem.css('background-color', 'white');
+            } else {
+              elem.css('background-color', '#444444');
+            }
+          } 
+
+        }, Math.floor(Math.random() * 10) * t);
+      }
+    }
+
+    var interval2 = setInterval(changes, 10 * 81);
+
+    function poligon_click() {
+      $('.poligon').off('click');
+      clearInterval(interval2);
       image_index = image_index + 1;
       $index = 0;
 
@@ -527,7 +565,7 @@ $(document).ready(function(){
         $array[t] = t;
       }
 
-      $(this).css('left', 'calc(50% - ' + width/2 + 'px');
+      $('.poligon').css('left', 'calc(50% - ' + width/2 + 'px');
 
       for (var t = 0; t < 81; t++) {
         setTimeout(function() {
@@ -537,7 +575,16 @@ $(document).ready(function(){
 
           if (image[$array[$number]] == 1) {
             
-            elem.css('background-color', '#2ab573');
+            var color = Math.floor(Math.random() * 10 + 1);
+
+            if (color > 2) {
+              elem.css('background-color', '#2ab573');
+            } else if (color == 2) {
+              elem.css('background-color', 'white');
+            } else {
+              elem.css('background-color', '#444444');
+            }
+
             elem.css('display', 'inline-block');
 
             var opacity = Math.floor((Math.random() * 100) + 40);
@@ -554,29 +601,18 @@ $(document).ready(function(){
             elem.css('display', 'inline-block');
           }        
 
+          if ($array.length == 1) {
+            setTimeout(function() {
+              interval2 = setInterval(changes, 10 * 81);
+              $('.poligon').on('click', poligon_click);
+            }, 2000);
+          }
+
           $array.splice($number, 1);
 
         }, Math.floor(Math.random() * 30 + 10) * t);
       }
-  
-    });
+    }
 
-
-
-
-    setInterval(function() {
-      for (var t = 0; t < 81; t++) {
-        setTimeout(function() {
-          $number = Math.floor(Math.random() * 81);
-
-          elem = $('.poligon').find('span').eq($number);
-
-          if (elem.css('background-color') != 'transparent') {
-            var opacity = Math.floor((Math.random() * 100) + 40);
-            elem.css('opacity', opacity/100);
-          } 
-
-        }, Math.floor(Math.random() * 10) * t);
-      }
-    }, 10 * 81);
+    $('.poligon').click(poligon_click);
 });
