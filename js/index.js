@@ -403,15 +403,16 @@ $(document).ready(function(){
                  0, 1, 1, 1, 0, 1, 1, 1, 0,
                  0, 1, 1, 1, 1, 1, 1, 1, 0]
 
-    var index = 0;
+
+    var $index = 0;
     var image_index = 0;    
 
     $('.poligon').find('span').each(function() {
-      if (benia[index] == 1) {
+      if (benia[$index] == 1) {
         $(this).css('background-color', '#2ab573');
         $(this).css('display', 'inline-block');
 
-      } else if (benia[index] == 2) {
+      } else if (benia[$index] == 2) {
         $(this).css('background-color', 'transparent');
         $(this).css('display', 'none');
 
@@ -420,15 +421,15 @@ $(document).ready(function(){
         $(this).css('display', 'inline-block');
       }
 
-      index = index + 1;
+      $index = $index + 1;
     });
 
+    var image;
 
     $('.poligon').click(function() {
       image_index = image_index + 1;
-      index = 0;
+      $index = 0;
 
-      var image;
       var width = 225;
 
       if (image_index == 28) {
@@ -521,24 +522,61 @@ $(document).ready(function(){
         image = benia;
       }
 
+      var $array = new Array(81);
+      for (var t = 0; t < 81; t++) {
+        $array[t] = t;
+      }
+
       $(this).css('left', 'calc(50% - ' + width/2 + 'px');
 
-      $(this).find('span').each(function() {
-        if (image[index] == 1) {
-          $(this).css('background-color', '#2ab573');
-          $(this).css('display', 'inline-block');
+      for (var t = 0; t < 81; t++) {
+        setTimeout(function() {
+          $number = Math.floor(Math.random() * $array.length);
 
-        } else if (image[index] == 2) {
-          $(this).css('background-color', 'transparent');
-          $(this).css('display', 'none');
+          elem = $('.poligon').find('span').eq($array[$number]);
 
-        } else {
-          $(this).css('background-color', 'transparent');
-          $(this).css('display', 'inline-block');
-        }
+          if (image[$array[$number]] == 1) {
+            
+            elem.css('background-color', '#2ab573');
+            elem.css('display', 'inline-block');
 
-        index = index + 1;
-      });
+            var opacity = Math.floor((Math.random() * 100) + 40);
+            elem.css('opacity', opacity/100);
 
+          } else if (image[$array[$number]] == 2) {
+            
+            elem.css('background-color', 'transparent');
+            elem.css('display', 'none');
+
+          } else {
+            
+            elem.css('background-color', 'transparent');
+            elem.css('display', 'inline-block');
+          }        
+
+          $array.splice($number, 1);
+
+        }, Math.floor(Math.random() * 30 + 10) * t);
+      }
+  
     });
+
+
+
+
+    setInterval(function() {
+      for (var t = 0; t < 81; t++) {
+        setTimeout(function() {
+          $number = Math.floor(Math.random() * 81);
+
+          elem = $('.poligon').find('span').eq($number);
+
+          if (elem.css('background-color') != 'transparent') {
+            var opacity = Math.floor((Math.random() * 100) + 40);
+            elem.css('opacity', opacity/100);
+          } 
+
+        }, Math.floor(Math.random() * 10) * t);
+      }
+    }, 10 * 81);
 });
