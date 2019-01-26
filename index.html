@@ -155,8 +155,37 @@
 	            	<h2 id="reg_header" class="position-relative" data-text="Попередня реєстрація">Попередня реєстрація</h2>
 	            	<h3 class="w-100 text-center">Що це?</h3>
 	            	<p>Пререєстрація - попередня реєстрація на проект, збір електронних пошт учасників. В день відкриття основної реєстрації на проект учасникам будуть надіслані електронні лист з детальною інформацією про реєстрацію на пошту, яку вони вказали під час пререєстрації.</p>
-	            	<input class="mt-1 w-100" type="email" name="email_reg" placeholder="Ввести email" />
-	            	<p class="button dark-blue mt-4 mb-0">Зареєструватись<span>_</span></p>
+	            	<form id="reg_form" class="gform" method="POST" data-email="leha.volodymyr@gmail.com" action="https://script.google.com/macros/s/AKfycbzrrXsEgeYY-9wszJgSFatqnSh2Bmf5d-QOWKmKmg/exec">
+	            		<input class="mt-1 w-100" type="email" name="email_reg" placeholder="Ввести email" required="required" />
+	            		<input id="input_reg_btn" type="submit" value="Зареєструватись_" class="button dark-blue mt-4 mb-0"/>
+	            	</form>
+	            	<div class="popup" style="display: none;">
+	            		<div class="window d-flex justify-content-center align-items-center">		        
+			            	<div>
+			            		<div class="bar">
+			            			<h3 class="bar-header">реєстрація</h3>
+			            			<div class="points">
+				            			<span></span>
+				            			<span></span>
+				            			<span></span>
+			            			</div>
+			            		</div>
+			            		<div class="content">
+			            			<div class="row px-md-5 px-4 py-4">
+			            				<div class="col-md-3 col-12 d-flex align-items-center justify-content-center">
+			            					<img src="images/blocks/benia-logo.png" class="img-fluid w-md-100 w-75"/>
+			            				</div>
+			            				<div class="col-md-9 col-12 mt-md-0 mt-4">
+			            					<p class="window-text">// Вас зареєстровано!.<br/>// :D<br/>// :3<br/>// &_&<br/>// ^_^</p>
+			            				</div>
+			            				<div class="col-12 mt-4">
+			            					<p class="button dark-blue w-100 text-center mb-0">ок<span>_</span></p>
+			            				</div>
+			            			</div>
+			            		</div>
+			            	</div>
+			            </div>
+	            	</div>
 	            </div>
           	</div>
 	    </div>
@@ -275,14 +304,13 @@
 		            					<p class="col-md col-12 window-text" style="font-size: 1.2em;">Національний університет "Львівська політехніка"<br/>Україна 79013, Львів, вул. Степана Бандери 12/235</p>
 		            				</div>
 		            				<div class="col-md-5 col-12 mt-4 px-2">
-		            					<p class="button dark-blue">Надіслати лист<span>_</span></p>
+		            					<a href="mailto:hack@best-lviv.org.ua" class="button dark-blue">Надіслати лист<span>_</span></a>
 		            				</div>
 		            				<div class="col-12 mt-4 px-2 d-flex flex-wrap justify-content-center align-items-center">
-		            					<a href="#" class="network-btn"><i class="fab fa-facebook-messenger"></i></a>
-		            					<a href="https://www.facebook.com/best.hackathon/" class="network-btn"><i class="fab fa-facebook-square"></i></a>
-		            					<a href="https://www.youtube.com/channel/UCgJ3hwP5MBKe4F2e6DLe9nA" class="network-btn"><i class="fab fa-youtube"></i></a>
-		            					<a href="https://www.instagram.com/best_lviv/" class="network-btn"><i class="fab fa-instagram"></i></a>
-		            					<a href="#" class="network-btn"><i class="fab fa-telegram"></i></a>
+		            					<a href="https://www.messenger.com/t/best.hackathon" class="network-btn" target="_blank"><i class="fab fa-facebook-messenger"></i></a>
+		            					<a href="https://www.facebook.com/best.hackathon/" class="network-btn" target="_blank"><i class="fab fa-facebook-square"></i></a>
+		            					<a href="https://www.youtube.com/channel/UCgJ3hwP5MBKe4F2e6DLe9nA" class="network-btn" target="_blank"><i class="fab fa-youtube"></i></a>
+		            					<a href="https://www.instagram.com/best_lviv/" class="network-btn" target="_blank"><i class="fab fa-instagram"></i></a>
 		            				</div>
 		            				<div class="col-12 mt-4 px-2">
 		            					<p class="w-100 text-center m-0">© 2019 BEST Lviv. All Rights Reserved.</p>
@@ -302,5 +330,6 @@
 	    
 	    <!--Main JS file-->
 	    <script src="js/index.js"></script>
+	    <script data-cfasync="false" type="text/javascript" src="js/form-submission-handler.js"></script>
     </body>
 </html>

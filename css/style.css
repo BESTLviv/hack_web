@@ -111,6 +111,16 @@ input {
   color: #3BAF0B;
 }
 
+input[type="submit"] {
+  border-bottom: none;
+  text-align: left;
+  width: 100%;
+}
+
+input[type="submit"]::first-letter {
+  color: red !important;
+}
+
 ::placeholder {
   color: #8eadad;
 }
@@ -507,3 +517,13 @@ p {
 /**
  *END Glitch
  */
+
+.popup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0, 0.9);
+  z-index: 4;
+}

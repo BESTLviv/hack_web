@@ -51,6 +51,14 @@ $(document).ready(function(){
 
 
 $(document).ready(function(){
+    $('#reg_form').submit(function() {
+      $('.popup').fadeIn(800);
+    });
+
+    $('.popup').find('.button').click(function() {
+      $('.popup').fadeOut(800);
+    });
+
     $('.window-button').click(function() {
       var new_window = '#' + $(this).attr('to');
       var old_window = '#' + $(this).attr('from');
@@ -79,10 +87,22 @@ $(document).ready(function(){
       }, 1200);
     });
 
-    $('.button').mouseleave(function() {
-      $(this).find('span').removeClass('invisible');
-      clearInterval(interval);
+    $('#input_reg_btn').mouseenter(function() {
+      interval = setInterval(function() {
+        setTimeout(function() {
+          $('#input_reg_btn').attr('value', 'зареєструватись');
+        }, 600);
+        
+        $('#input_reg_btn').attr('value', 'зареєструватись_');
+      }, 1200);
     });
+
+    $('.button').mouseleave(function() {
+      clearInterval(interval);
+      $(this).find('span').removeClass('invisible');
+      $('#input_reg_btn').attr('value', 'зареєструватись_')
+    });
+
 
 
     var benia = [[0, 0, 1, 1, 1, 1, 1, 0, 0,
