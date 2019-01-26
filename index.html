@@ -5,21 +5,17 @@
 		<title>BEST::HACKath0n</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<!--Styles-->
     	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
     	<link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
     	<link rel="stylesheet" href="fonts/styles.css">
 
-    	<!--Icon-->
     	<link rel="shortcut icon" href="favicon.png" type="image/png">
 
       	<link rel="stylesheet" href="css/bootstrap.min.css">
       	<link rel="stylesheet" type="text/css" href="css/style.css">
 
-    	<!--Font-awesome:         -->
     	<script src="js/all.js"></script>
 
-    	<!-- Global site tag (gtag.js) - Google Analytics -->
     	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-38764566-3"></script>
     	<script>
         	window.dataLayer = window.dataLayer || [];
@@ -30,18 +26,18 @@
     </head>
 
     <body>
-	    <span id="scrollToTop" class="js-scroll-to-top">⇡</span>
+	    <span id="scrollToTop" class="js-scroll-to-top scroll-button" to-section="main-section">⇡</span>
 
 	    <!--START Side menu-->
 		<div id="mySidenav" class="sidenav">
-			<a href="#top">Головна</a>
-			<a href="#sec">BEST::HACKath0n</a>
-			<a href="#">Реєстрація</a>
-			<a href="#">Організатор</a>
-			<a href="#gallery">Галерея</a>
-			<a href="#">Відео</a>
-			<a href="#">Партнери</a>
-			<a href="#">Контакти</a>
+			<p class="scroll-button" to-section="main-section">Головна</p>
+			<p class="scroll-button" to-section="about-section">BEST::HACKath0n</p>
+			<p class="scroll-button" to-section="reg-section">Реєстрація</p>
+			<p class="scroll-button" to-section="org-section">Організатор</p>
+			<p class="scroll-button" to-section="gallery-section">Галерея</p>
+			<p class="scroll-button" to-section="video-section">Відео</p>
+			<p class="scroll-button" to-section="partners-section">Партнери</p>
+			<p class="scroll-button" to-section="contacts-section">Контакти</p>
 		</div>
 
 		<!-- A button to open the sidenav -->
@@ -54,8 +50,8 @@
 
 
 	    <!-- START Main Section-->
-	    <div class="container-fluid px-0">
-	    	<div id="top" class="row mx-0">
+	    <div id="main-section" class="container-fluid px-0">
+	    	<div class="row mx-0">
             	<div class="poligon">
             		<div>
             			<span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
@@ -90,15 +86,15 @@
 
             	<div class="col-lg-6 section light-blue d-flex justify-content-center align-items-center flex-column pt-lg-0 pt-5">
             		<a class="button dark-blue mt-5" href="http://hack.best-lviv.org.ua/console">Geek version<span>_</span></a>
-          			<a class="d-lg-none mt-4 button dark-blue" href="#sec">Slide down<span>_</span></a>
+          			<p class="d-lg-none mt-4 mb-0 button dark-blue scroll-button" to-section="about-section">Slide down<span>_</span></p>
             	</div>
 
             	<div class="col-lg-6 section dark-blue d-none d-lg-flex justify-content-center align-items-center">
             		<div>
-            			<a class="button light-blue" href="#sec">Slide down<span>_</span></a>
+            			<p class="button light-blue scroll-button mt-5 mb-0" to-section="about-section">Slide down<span>_</span></p>
             		</div>
             	</div>
-            	<div class="arrow-down">
+            	<div class="arrow-down scroll-button" to-section="about-section">
             		<div></div>
             		<div></div>
             		<div></div>
@@ -112,7 +108,7 @@
 	    <!--START About Section-->
 	    <div class="container-fluid px-0">
 	    	<div id="sec" class="row mx-0">
-	            <div id="#do_you" class="col-lg-6 section dark-blue px-0">
+	            <div id="about-section" class="col-lg-6 section dark-blue px-0">
 		            <div class="window d-flex justify-content-center align-items-center">		        
 		            	<div id="window_main">
 		            		<div class="bar">
@@ -149,13 +145,13 @@
 		            		</div>
 		            		<div class="content px-md-5 px-4 py-4">
 		            			<p class="window-text mb-4">/**<br/>Hackathon - це захід, на який збираються розробники, дизайнери,інженери, щоб за обмежений час в режимі інтенсиву та командноїроботи, створити та презентуватисвій проект<br/>**/</p>
-		            			<p id="reg_glitch_button" class="button dark-blue w-100 text-center m-0">Реєстрація<span>_</span></p>
+		            			<p id="reg_glitch_button" class="button dark-blue w-100 text-center m-0 scroll-button" to-section="reg-section">Реєстрація<span>_</span></p>
 		            		</div>
 		            	</div>
 		            </div>
 	            </div>
 
-	            <div class="col-lg-6 section mobile-section light-blue p-md-5 p-4">
+	            <div id="reg-section" class="col-lg-6 section mobile-section light-blue p-md-5 p-4">
 	            	<h2 id="reg_header" class="position-relative" data-text="Попередня реєстрація">Попередня реєстрація</h2>
 	            	<h3 class="w-100 text-center">Що це?</h3>
 	            	<p>Пререєстрація - попередня реєстрація на проект, збір електронних пошт учасників. В день відкриття основної реєстрації на проект учасникам будуть надіслані електронні лист з детальною інформацією про реєстрацію на пошту, яку вони вказали під час пререєстрації.</p>
@@ -169,7 +165,7 @@
 
 	    <!--START Gallery, Schedule Section-->
 	    <div class="container-fluid px-0">
-	    	<div id="gallery" class="row mx-0">
+	    	<div id="org-section" class="row mx-0">
 	    		<div class="col-lg-6 order-lg-1 section mobile-section dark-blue p-md-5 p-4">
 	              	<h2>організатор проекту</h2>
 	              	<h3 class="w-100 text-center">BEST Lviv</h3>
@@ -177,7 +173,7 @@
 	              	<a href="http://best-lviv.org.ua/" class="button light-blue mt-4" target="_blank">Детальніше<span>_</span></a>
 	            </div>
 
-            	<div class="col-lg-6 p-md-0 p-4 section mobile-section light-blue d-flex justify-content-center align-items-center flex-column">
+            	<div id="gallery-section" class="col-lg-6 p-md-0 p-4 section mobile-section light-blue d-flex justify-content-center align-items-center flex-column">
 					<img src="images/blocks/galler.png" class="img-fluid gallery-img mb-md-5 mb-4" alt="">
             		<a class="button dark-blue" href="https://www.flickr.com/photos/best_lviv/albums/72157668244164751" target="_blank">ГАЛЕРЕЯ<span>_</span></a>
             	</div>
@@ -188,14 +184,14 @@
 		
 
 		<!-- START Video Section-->
-		<div class="container-fluid px-0" style="height: 100vh;">
+		<div id="video-section" class="container-fluid px-0" style="height: 100vh;">
   			<iframe width="100%" height ="100%" src="https://www.youtube.com/embed/BQlInbRGql4" frameborder="0" allowfullscreen></iframe>	  					 
 		</div>		   
 		<!-- END Video Section-->
 
 
 	    <!--START Partners Section-->
-	    <div class="container-fluid py-md-5 py-4 px-4">
+	    <div id="partners-section" class="container-fluid py-md-5 py-4 px-4">
     		<h2 class="w-100 text-center">МИНУЛОРІЧНІ ПАРТНЕРИ:</h2>
 
           	<div class="row d-flex justify-content-center align-items-center mx-1">
@@ -244,14 +240,14 @@
           	</div>
 
           	<div class="w-100 pt-md-5 pt-4" style="text-align: center;">
-          		<div class="button dark-blue">СТАТИ ПАРТНЕРОМ<span>_</span></div>
+          		<div class="button dark-blue scroll-button" to-section="contacts-section">СТАТИ ПАРТНЕРОМ<span>_</span></div>
           	</div>
 	    </div>
 	    <!--END Partners Section-->
 
 
 	    <!--START Contacts Section-->
-	    <div class="container-fluid px-0">
+	    <div id="contacts-section" class="container-fluid px-0">
 	    	<div class="row mx-0">
             	<div id="contacts" class="col-12 dark-blue px-0">
 		            <div class="window d-flex justify-content-center align-items-end">		        
@@ -306,6 +302,5 @@
 	    
 	    <!--Main JS file-->
 	    <script src="js/index.js"></script>
-
     </body>
 </html>

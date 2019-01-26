@@ -13,7 +13,7 @@
 
   .sidenav {padding-top: 40px !important;}
 
-  .sidenav a {font-size: 1em !important;}
+  .sidenav p {font-size: 1em !important;}
 
   .button span {display: none;}
 
@@ -166,6 +166,8 @@ p {
 }
 
 .network-btn:hover {color: #3BAF0B;}
+
+.scroll-button {cursor: pointer;}
 /**
  * END Buttons
  */
@@ -186,14 +188,16 @@ p {
   transition: 0.4s; 
 }
 
-.sidenav a {
-  padding: 8px 8px 8px 32px;
+.sidenav p {
+  padding: 8px 8px 0px 32px;
   font-size: 1.6em;
   display: block;
   transition: 0.4s;
+  color: white;
+  font-family: 'hooge05_55Cyr2';
 }
 
-.sidenav a:hover {color: #3BAF0B !important;}
+.sidenav p:hover {color: #3BAF0B !important;}
 
 .menu-btn {
   position: fixed;
