@@ -30,21 +30,17 @@
     </head>
 
     <body>
-
-    	<!--Тут є прелоадер, поки залишаємо
-	    <div id="hellopreloader">
-	    	<div id="hellopreloader_preload"></div>
-	    </div>
-		-->
-
 	    <span id="scrollToTop" class="js-scroll-to-top">⇡</span>
 
 	    <!--START Side menu-->
 		<div id="mySidenav" class="sidenav">
 			<a href="#top">Головна</a>
 			<a href="#sec">BEST::HACKath0n</a>
+			<a href="#">Реєстрація</a>
+			<a href="#">Організатор</a>
 			<a href="#gallery">Галерея</a>
-			<a href="#">Відос</a>
+			<a href="#">Відео</a>
+			<a href="#">Партнери</a>
 			<a href="#">Контакти</a>
 		</div>
 
@@ -93,7 +89,7 @@
 				<div class="main-glitch glitch" data-text="BEST IT">HACK IT</div> 
 
             	<div class="col-lg-6 section light-blue d-flex justify-content-center align-items-center flex-column pt-lg-0 pt-5">
-            		<a class="button dark-blue" href="http://hack.best-lviv.org.ua/console">Geek version<span>_</span></a>
+            		<a class="button dark-blue mt-5" href="http://hack.best-lviv.org.ua/console">Geek version<span>_</span></a>
           			<a class="d-lg-none mt-4 button dark-blue" href="#sec">Slide down<span>_</span></a>
             	</div>
 
@@ -116,7 +112,7 @@
 	    <!--START About Section-->
 	    <div class="container-fluid px-0">
 	    	<div id="sec" class="row mx-0">
-	            <div id="#do_you" class="col-lg-6 section dark-blue">
+	            <div id="#do_you" class="col-lg-6 section dark-blue px-0">
 		            <div class="window d-flex justify-content-center align-items-center">		        
 		            	<div id="window_main">
 		            		<div class="bar">
@@ -128,15 +124,15 @@
 		            			</div>
 		            		</div>
 		            		<div class="content">
-		            			<div class="row px-5 py-4">
-		            				<div class="col-3 d-flex align-items-center justify-content-center">
-		            					<img src="images/blocks/benia-logo.png" class="img-fluid w-100"/>
+		            			<div class="row px-md-5 px-4 py-4">
+		            				<div class="col-md-3 col-12 d-flex align-items-center justify-content-center">
+		            					<img src="images/blocks/benia-logo.png" class="img-fluid w-md-100 w-75"/>
 		            				</div>
-		            				<div class="col-9">
+		            				<div class="col-md-9 col-12 mt-md-0 mt-4">
 		            					<p class="window-text">// BEST::HACKathon<br/>// Команда з 3-5 осіб<br/>// м. Львів<br/>// Травень 2019 року<br/>// Попередня реєстрація</p>
 		            				</div>
 		            				<div class="col-12 mt-4">
-		            					<p to="window_about" from="window_main" class="window-button button dark-blue w-100 text-center">детальніше<span>_</span></p>
+		            					<p to="window_about" from="window_main" class="window-button button dark-blue w-100 text-center mb-0">детальніше<span>_</span></p>
 		            				</div>
 		            			</div>
 		            		</div>
@@ -151,20 +147,20 @@
 			            			<span></span>
 		            			</div>
 		            		</div>
-		            		<div class="content px-5 py-4">
-		            			<p class="window-text mb-4">/**<br/><span class="invisible">/</span>* Hackathon - це захід, на який<br/><span class="invisible">/</span>* збираються розробники, дизайнери,<br/><span class="invisible">/</span>* інженери, щоб за обмежений час<br/><span class="invisible">/</span>* в режимі інтенсиву та командної<br/><span class="invisible">/</span>* роботи, створити та презентувати<br/><span class="invisible">/</span>* свій проект<br/><span class="invisible">/</span>**/</p>
-		            			<p id="reg_glitch_button" class="button dark-blue w-100 text-center">Як зареєструватись?<span>_</span></p>
+		            		<div class="content px-md-5 px-4 py-4">
+		            			<p class="window-text mb-4">/**<br/>Hackathon - це захід, на який збираються розробники, дизайнери,інженери, щоб за обмежений час в режимі інтенсиву та командноїроботи, створити та презентуватисвій проект<br/>**/</p>
+		            			<p id="reg_glitch_button" class="button dark-blue w-100 text-center m-0">Реєстрація<span>_</span></p>
 		            		</div>
 		            	</div>
 		            </div>
 	            </div>
 
-	            <div class="col-lg-6 section light-blue p-md-5 p-4">
+	            <div class="col-lg-6 section mobile-section light-blue p-md-5 p-4">
 	            	<h2 id="reg_header" class="position-relative" data-text="Попередня реєстрація">Попередня реєстрація</h2>
 	            	<h3 class="w-100 text-center">Що це?</h3>
 	            	<p>Пререєстрація - попередня реєстрація на проект, збір електронних пошт учасників. В день відкриття основної реєстрації на проект учасникам будуть надіслані електронні лист з детальною інформацією про реєстрацію на пошту, яку вони вказали під час пререєстрації.</p>
-	            	<input class="mt-4" type="email" name="email_reg" placeholder="Ввести електронну пошту" />
-	            	<p class="button dark-blue mt-4">Зареєструватись<span>_</span></p>
+	            	<input class="mt-1 w-100" type="email" name="email_reg" placeholder="Ввести email" />
+	            	<p class="button dark-blue mt-4 mb-0">Зареєструватись<span>_</span></p>
 	            </div>
           	</div>
 	    </div>
@@ -174,18 +170,16 @@
 	    <!--START Gallery, Schedule Section-->
 	    <div class="container-fluid px-0">
 	    	<div id="gallery" class="row mx-0">
-	    		<div class="col-lg-6 order-lg-1 section dark-blue p-md-5 p-4">
+	    		<div class="col-lg-6 order-lg-1 section mobile-section dark-blue p-md-5 p-4">
 	              	<h2>організатор проекту</h2>
 	              	<h3 class="w-100 text-center">BEST Lviv</h3>
 	              	<p>BEST (Board of European Students of Technology) або Рада студентів технічних університетів – неприбуткова, неполітична та нерелігійна організація, яка представлена у 97 осередках 34 країн світу. З 1989 року BEST забезпечує обмін знаннями та співробітництво між студентами, компаніями та університетами на теренах Європи.<br/><br/>BEST Lviv діє при Національному університеті "Львівська політехніка".</p>
-	              	<a href="http://best-lviv.org.ua/" class="button light-blue mt-4" target="_blank">Дізнатись більше<span>_</span></a>
+	              	<a href="http://best-lviv.org.ua/" class="button light-blue mt-4" target="_blank">Детальніше<span>_</span></a>
 	            </div>
 
-            	<div class="col-lg-6 section light-blue d-flex justify-content-center align-items-center flex-column">
-					<img src="images/blocks/galler.png" class="img-fluid gallery-img mb-5" alt="">
-	            	<div>
-	            		<a class="button dark-blue" href="https://www.flickr.com/photos/best_lviv/albums/72157668244164751" target="_blank">ГАЛЕРЕЯ<span>_</span></a>
-	            	</div>
+            	<div class="col-lg-6 p-md-0 p-4 section mobile-section light-blue d-flex justify-content-center align-items-center flex-column">
+					<img src="images/blocks/galler.png" class="img-fluid gallery-img mb-md-5 mb-4" alt="">
+            		<a class="button dark-blue" href="https://www.flickr.com/photos/best_lviv/albums/72157668244164751" target="_blank">ГАЛЕРЕЯ<span>_</span></a>
             	</div>
 
 	        </div>
@@ -201,55 +195,55 @@
 
 
 	    <!--START Partners Section-->
-	    <div class="container-fluid py-5 px-0">
+	    <div class="container-fluid py-md-5 py-4 px-4">
     		<h2 class="w-100 text-center">МИНУЛОРІЧНІ ПАРТНЕРИ:</h2>
 
           	<div class="row d-flex justify-content-center align-items-center mx-1">
-      			<a href="https://tickets.ua/" target="_blank">
+      			<a class="text-center" href="https://tickets.ua/" target="_blank">
       				<img src="images/partners/tickets.png" alt="Tickets" class="partners_1">
       			</a>
-      			<a href="https://www.infopulse.com/" target="_blank">
+      			<a class="text-center" href="https://www.infopulse.com/" target="_blank">
       				<img src="images/partners/infopulse.png" alt="Infopulse" class="partners_1">
       			</a>
-	  			<a href="https://www.impulsis.com/ua/" target="_blank">
+	  			<a class="text-center" href="https://www.impulsis.com/ua/" target="_blank">
 	  				<img src="images/partners/impulsis.png" alt="Impulsis" width="70%" height="60%" class="partners_1">
 	  			</a>
-	  			<a href="https://www.shadowmastersgames.com/" target="_blank">
+	  			<a class="text-center" href="https://www.shadowmastersgames.com/" target="_blank">
 	  				<img src="images/partners/shad.png" alt="Shadow Masters" width="80%" height="70%" class="partners_1">
 	  			</a>
-	  			<a href="https://incode-it.com/" target="_blank">
+	  			<a class="text-center" href="https://incode-it.com/" target="_blank">
 	  				<img src="images/partners/incode.png" alt="Incode" width="70%" height="70%" class="partners_1">
 	  			</a>
-	  			<a href="https://dataart.ua/" target="_blank">
+	  			<a class="text-center" href="https://dataart.ua/" target="_blank">
 	  				<img src="images/partners/dataart.gif" alt="Data Art" class="partners_1">
 	  			</a>
-	  			<a href="https://eleks.com/" target="_blank">
+	  			<a class="text-center" href="https://eleks.com/" target="_blank">
 	  				<img src="images/partners/ELEKS.png" alt="Eleks" width="70%" height="70%" class="partners_1">
 	  			</a>
-	  			<a href="http://ralabs.org/" target="_blank">
+	  			<a class="text-center" href="http://ralabs.org/" target="_blank">
 	  				<img src="images/partners/ralabs.png" alt="Ralabs" class="partners_1">
 	  			</a>
-	  			<a href="http://ukraine.cursor.education/course/web-ui-basic" target="_blank">
+	  			<a class="text-center" href="http://ukraine.cursor.education/course/web-ui-basic" target="_blank">
 	  				<img src="images/partners/cursor.png" alt="Cursor" width="60%" height="60%" class="partners_1">
 	  			</a>
-	  			<a href="http://www.symphony-solutions.eu/" target="_blank">
+	  			<a class="text-center" href="http://www.symphony-solutions.eu/" target="_blank">
 	  				<img src="images/partners/symphony-solutions_logo.png" alt="Symphony Solutions" class="partners_1">
 	  			</a>
-	  			<a href="http://black.ua/" target="_blank">
+	  			<a class="text-center" href="http://black.ua/" target="_blank">
 	  				<img src="images/partners/Black_LOGO_41.png" alt="Black Energy drink" width="70%" height="70%" class="partners_1">
 	  			</a>
-	  			<a href="https://multiplex.ua/" target="_blank">
+	  			<a class="text-center" href="https://multiplex.ua/" target="_blank">
 	  				<img src="images/partners/multiplex.png" alt="MULTIPLEX" class="partners_1">
 	  			</a>
-	  			<a href="http://rk-ukraina.com/intersport-lv" target="_blank">
+	  			<a class="text-center" href="http://rk-ukraina.com/intersport-lv" target="_blank">
 	  				<img src="images/partners/intersport.jpeg" alt="Intersport" class="partners_1">
 	  			</a>
-	  			<a href="http://www.pridebikes.com/" target="_blank">
+	  			<a class="text-center" href="http://www.pridebikes.com/" target="_blank">
 	  				<img src="images/partners/Pride.png" alt="Львівська міська рада" class="partners_1">
 	  			</a>
           	</div>
 
-          	<div class="w-100 pt-5" style="text-align: center;">
+          	<div class="w-100 pt-md-5 pt-4" style="text-align: center;">
           		<div class="button dark-blue">СТАТИ ПАРТНЕРОМ<span>_</span></div>
           	</div>
 	    </div>
@@ -259,9 +253,9 @@
 	    <!--START Contacts Section-->
 	    <div class="container-fluid px-0">
 	    	<div class="row mx-0">
-            	<div class="col-12 dark-blue" style="height: 60vh;">
+            	<div id="contacts" class="col-12 dark-blue px-0">
 		            <div class="window d-flex justify-content-center align-items-end">		        
-		            	<div>
+		            	<div id="test">
 		            		<div class="bar">
 		            			<h3 class="bar-header">Зв'язатись з нами</h3>
 		            			<div class="points">
@@ -271,31 +265,31 @@
 		            			</div>
 		            		</div>
 		            		<div class="content">
-		            			<div class="row px-5 py-4">
-		            				<div class="col-7 d-flex align-items-start">
-		            					<p class="window-text mr-3">Тел.<span style="color: white;">ес.</span> </p>
-		            					<p class="window-text">+38 (097) 583 8098<br/>+38 (097) 583 8098</p>
+		            			<div class="row px-md-5 px-4 py-4">
+		            				<div class="row col-md-7 col-12 px-2">
+		            					<p class="col-md-2 col-12 window-text">Тел.</p>
+		            					<p class="col-md col-12 window-text">+38 (097) 583 8098<br/>+38 (097) 583 8098</p>
 		            				</div>
-		            				<div class="col-5">
-		            					<p class="window-text">E-mail:<br/></p>
+		            				<div class="col-md-5 col-12 mt-md-0 mt-4 px-2">
+		            					<p class="window-text">E-mail:</p>
 		            					<p class="window-text">hack@best-lviv.org.ua</p>
 		            				</div>
-		            				<div class="col-7 mt-4 d-flex align-items-start">
-		            					<p class="window-text mr-3">Адреса</p>
-		            					<p class="window-text" style="font-size: 1.2em;">Національний університет "Львівська політехніка"<br/>Україна 79013, Львів, вул. Степана Бандери 12/235</p>
+		            				<div class="row col-md-7 col-12 mt-4 px-2">
+		            					<p class="col-md-2 col-12 window-text">Адреса</p>
+		            					<p class="col-md col-12 window-text" style="font-size: 1.2em;">Національний університет "Львівська політехніка"<br/>Україна 79013, Львів, вул. Степана Бандери 12/235</p>
 		            				</div>
-		            				<div class="col-5 mt-4">
+		            				<div class="col-md-5 col-12 mt-4 px-2">
 		            					<p class="button dark-blue">Надіслати лист<span>_</span></p>
 		            				</div>
-		            				<div class="col-12 mt-4 text-center">
+		            				<div class="col-12 mt-4 px-2 d-flex flex-wrap justify-content-center align-items-center">
 		            					<a href="#" class="network-btn"><i class="fab fa-facebook-messenger"></i></a>
 		            					<a href="https://www.facebook.com/best.hackathon/" class="network-btn"><i class="fab fa-facebook-square"></i></a>
 		            					<a href="https://www.youtube.com/channel/UCgJ3hwP5MBKe4F2e6DLe9nA" class="network-btn"><i class="fab fa-youtube"></i></a>
 		            					<a href="https://www.instagram.com/best_lviv/" class="network-btn"><i class="fab fa-instagram"></i></a>
 		            					<a href="#" class="network-btn"><i class="fab fa-telegram"></i></a>
 		            				</div>
-		            				<div class="col-12 mt-4">
-		            					<p class="w-100 text-center">© 2019 BEST Lviv. All Rights Reserved.</p>
+		            				<div class="col-12 mt-4 px-2">
+		            					<p class="w-100 text-center m-0">© 2019 BEST Lviv. All Rights Reserved.</p>
 		            				</div>
 		            			</div>
 		            		</div>

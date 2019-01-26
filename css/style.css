@@ -1,7 +1,3 @@
-/**
- * Тут починається нормальний CSS
- */
-
 @media screen and (max-width: 767px)  {
   h2 {font-size: 2.4em !important;}
 
@@ -9,20 +5,47 @@
 
   p {font-size: 1.2em !important;}
 
-  .button {font-size: 1.6em !important;}
+  .button {
+    font-size: 1.6em !important;
+    width: 100%;
+    padding: 0px 20px !important;
+  }
 
   .sidenav {padding-top: 40px !important;}
 
   .sidenav a {font-size: 1em !important;}
 
-  .button {width: 100%;}
-
   .button span {display: none;}
 
   .main-glitch {
     font-size: 2.4em !important;
-    top: 65vh !important;
-  };
+    bottom: 22vh !important;
+  }
+
+  .bar-header {
+    font-size: 1.1em !important;
+    padding-top: 3px;
+  }
+
+  .fa-arrow-left {
+    font-size: 16px !important;
+    margin: 0px 8px -1px 0px !important;
+  }
+
+  .points span:nth-of-type(1) {display: none;}
+  .points span:nth-of-type(2) {display: none;}
+
+  .window > div {width: 86% !important;}
+
+  .window .button {font-size: 1.2em !important;}
+
+  .window-text {font-size: 1.1em !important;}
+
+  .mobile-section {min-height: auto !important;}
+
+  input {font-size: 1.6em !important;}
+
+  .network-btn {margin: 0px 16px !important;}
 }
 
 body {font-family: 'hooge05_55Cyr2';}
@@ -137,7 +160,7 @@ p {
 
 .network-btn {
   color: #253E49;
-  margin: 36px;
+  margin: 8px 36px;
   transition: 0.8s;
   font-size: 3em;
 }
@@ -356,7 +379,7 @@ p {
  */
 .poligon {
   position: absolute;
-  top: 50px;
+  top: 40px;
   left: calc(50% - 225px/2);
   cursor: pointer;
   transition: 1.6s;
@@ -398,7 +421,7 @@ p {
   color: white;
   position: absolute;
   font-size: 3em;
-  top: 60vh;
+  bottom: 30vh;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
@@ -480,26 +503,3 @@ p {
 /**
  *END Glitch
  */
-
-/**
- * А тут він закінчується 
- */
-
-
-
-#hellopreloader>p{
-  display:none;
-}
-
-#hellopreloader_preload{
-  display: block;position: fixed;
-  z-index: 99999;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  min-width: 200px;
-  background: #253e49 url(http://hello-site.ru//main/images/preloads/ball-triangle.svg) center center no-repeat;
-  background-size:109px;
-}
-

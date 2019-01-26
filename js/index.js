@@ -23,26 +23,6 @@
       });
     });
 
-
- //hello preloader
-
- /*var hellopreloader = document.getElementById("hellopreloader_preload");
- function fadeOutnojquery(el){
-   el.style.opacity = 1;
-   var interhellopreloader = setInterval(function(){
-     el.style.opacity = el.style.opacity - 0.05;
-     if (el.style.opacity <=0.05){
-        clearInterval(interhellopreloader);
-        hellopreloader.style.display = "none";
-     }
-   },16);
-   }
-   window.onload = function(){
-     setTimeout(function(){
-       fadeOutnojquery(hellopreloader);
-   },1000);
- };*/
-
   // columns
 
   /* Set the width of the side navigation to 250px */
@@ -107,6 +87,8 @@ $(document).ready(function(){
       
       $(new_window).fadeIn(600);      
     });
+
+    $('#contacts').height($('#test').height() + 48);
 
     var interval;
 
@@ -605,7 +587,7 @@ $(document).ready(function(){
             setTimeout(function() {
               interval2 = setInterval(changes, 10 * 81);
               $('.poligon').on('click', poligon_click);
-            }, 2000);
+            }, 4000);
           }
 
           $array.splice($number, 1);
