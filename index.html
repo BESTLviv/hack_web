@@ -108,7 +108,7 @@
 	    <!--START About Section-->
 	    <div class="container-fluid px-0">
 	    	<div id="sec" class="row mx-0">
-	            <div id="about-section" class="col-lg-6 section dark-blue px-0">
+	            <div id="about-section" class="col-lg-6 section dark-blue py-4 px-0">
 		            <div class="window d-flex justify-content-center align-items-center">		        
 		            	<div id="window_main">
 		            		<div class="bar">
@@ -120,12 +120,12 @@
 		            			</div>
 		            		</div>
 		            		<div class="content">
-		            			<div class="row px-md-5 px-4 py-4">
-		            				<div class="col-md-3 col-12 d-flex align-items-center justify-content-center">
+		            			<div class="row px-4 py-4">
+		            				<div class="col-xl-3 col-lg-12 col-sm-3 col-12 d-flex align-items-center justify-content-center">
 		            					<img src="images/blocks/benia-logo.png" class="img-fluid w-md-100 w-75"/>
 		            				</div>
-		            				<div class="col-md-9 col-12 mt-md-0 mt-4">
-		            					<p class="window-text">// BEST::HACKathon<br/>// Команда з 3-5 осіб<br/>// м. Львів<br/>// Травень 2019 року<br/>// Попередня реєстрація</p>
+		            				<div class="col-sm-9 col-12 mt-xl-0 mt-lg-4 mt-sm-0 mt-4">
+		            					<p class="window-text">// BEST::HACKath0n<br/>// Команда з 3-5 осіб<br/>// м. Львів<br/>// Травень 2019 року<br/>// Попередня реєстрація</p>
 		            				</div>
 		            				<div class="col-12 mt-4">
 		            					<p to="window_about" from="window_main" class="window-button button dark-blue w-100 text-center mb-0">детальніше<span>_</span></p>
@@ -144,24 +144,21 @@
 		            			</div>
 		            		</div>
 		            		<div class="content px-md-5 px-4 py-4">
-		            			<p class="window-text mb-4">/**<br/>Hackathon - це захід, на який збираються розробники, дизайнери,інженери, щоб за обмежений час в режимі інтенсиву та командноїроботи, створити та презентуватисвій проект<br/>**/</p>
+		            			<p class="window-text mb-4">/**<br/>Hackathon - це захід, на який збираються розробники, дизайнери, інженери, щоб за обмежений час в режимі інтенсиву та командної роботи, створити та презентувати свій проект.<br/>**/</p>
 		            			<p id="reg_glitch_button" class="button dark-blue w-100 text-center m-0 scroll-button" to-section="reg-section">Реєстрація<span>_</span></p>
 		            		</div>
 		            	</div>
 		            </div>
 	            </div>
 
-	            <div id="reg-section" class="col-lg-6 section mobile-section light-blue p-md-5 p-4">
+	            <div id="reg-section" class="col-lg-6 section light-blue p-md-5 p-4">
 	            	<h2 id="reg_header" class="position-relative" data-text="Попередня реєстрація">Попередня реєстрація</h2>
 	            	<h3 class="w-100 text-center">Що це?</h3>
-	            	<p>
-	            		 Під час попередньої реєстрації ми збираємо електронні пошти людей, зацікавлених у BEST::HACKathon<br/><br/>
-
-		            	Залиш свою пошту в формі нижче, і в день початку реєстрації ми надішлемо тобі електронного листа з детальною інформацією про проект
-					</p>
+	            	<p>Залиш свою пошту в формі нижче, і в день початку реєстрації ми надішлемо тобі електронного листа з детальною інформацією про проект.</p>
 	            	<form id="reg_form" class="gform" method="POST" data-email="leha.volodymyr@gmail.com" action="https://script.google.com/macros/s/AKfycbzrrXsEgeYY-9wszJgSFatqnSh2Bmf5d-QOWKmKmg/exec">
 	            		<input class="mt-1 w-100" type="email" name="email_reg" placeholder="Ввести email" required="required" />
-	            		<input id="input_reg_btn" type="submit" value="Зареєструватись_" class="button dark-blue mt-4 mb-0"/>
+	            		<input id="input_reg_btn" type="submit" class="d-none"/>
+	            		<p id="reg_btn" class="button dark-blue w-100 mt-4 mb-0">зареєструватись<span>_</span></p>
 	            	</form>
 	            	<div class="popup" style="display: none;">
 	            		<div class="window d-flex justify-content-center align-items-center">		        
@@ -295,19 +292,18 @@
 		            		</div>
 		            		<div class="content">
 		            			<div class="row px-md-5 px-4 py-4">
-		            				<div class="row col-md-7 col-12 px-2">
-		            					<p class="col-md-2 col-12 window-text">Тел.</p>
-		            					<p class="col-md col-12 window-text">+38 (097) 583 8098<br/>+38 (097) 583 8098</p>
+		            				<div class="row col-xl-7 col-12 px-3">
+		            					<p class="col-md-2 col-12 window-text px-0">Тел:</p>
+		            					<p class="col-md col-12 window-text px-0">+38 (097) 583 8098<br/>+38 (098) 332 6998</p>
 		            				</div>
-		            				<div class="col-md-5 col-12 mt-md-0 mt-4 px-2">
+		            				<div class="col-xl-5 col-12 mt-md-0 mt-4 px-0">
 		            					<p class="window-text">E-mail:</p>
 		            					<p class="window-text">hack@best-lviv.org.ua</p>
 		            				</div>
-		            				<div class="row col-md-7 col-12 mt-4 px-2">
-		            					<p class="col-md-2 col-12 window-text">Адреса</p>
-		            					<p class="col-md col-12 window-text" style="font-size: 1.2em;">Національний університет "Львівська політехніка"<br/>Україна 79013, Львів, вул. Степана Бандери 12/235</p>
+		            				<div class="row col-xl-7 col-12 mt-4 px-3">
+		            					<p class="window-text">Адреса:<br/><span style="font-size: 0.8em;">Національний університет "Львівська політехніка"<br/>Україна 79013, Львів, вул. Степана Бандери 12/235</span></p>
 		            				</div>
-		            				<div class="col-md-5 col-12 mt-4 px-2">
+		            				<div class="col-xl-5 col-12 mt-4 px-0">
 		            					<a href="mailto:hack@best-lviv.org.ua" class="button dark-blue">Надіслати лист<span>_</span></a>
 		            				</div>
 		            				<div class="col-12 mt-4 px-2 d-flex flex-wrap justify-content-center align-items-center">

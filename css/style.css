@@ -1,3 +1,8 @@
+@media screen and (max-width: 1199px)  {
+  .mobile-section {min-height: auto !important;}
+  #reg-section {min-height: 70vh !important;}
+}
+
 @media screen and (max-width: 767px)  {
   h2 {font-size: 2.4em !important;}
 
@@ -19,7 +24,7 @@
 
   .main-glitch {
     font-size: 2.4em !important;
-    bottom: 22vh !important;
+    top: calc(50vh + 110px) !important;
   }
 
   .bar-header {
@@ -40,8 +45,6 @@
   .window .button {font-size: 1.2em !important;}
 
   .window-text {font-size: 1.1em !important;}
-
-  .mobile-section {min-height: auto !important;}
 
   input {font-size: 1.6em !important;}
 
@@ -435,7 +438,7 @@ p {
   color: white;
   position: absolute;
   font-size: 3em;
-  bottom: 30vh;
+  top: 65vh;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
