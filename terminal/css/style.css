@@ -88,13 +88,17 @@ input[type="text"]:focus{
   outline:none;
 }
 .command{
-  display: block;
+  display: inline;
   max-width: 20em;
   color: #fff;
   font-weight: 700;
   margin: 2em 0;
 }
 
+#sudo_command, #root {
+  display: inline;
+  color: #fff;
+}
 
 section{
   display: none;
@@ -102,3 +106,13 @@ section{
 .open{
   display: block;
 }
+
+::-webkit-scrollbar {
+    width: 4px;
+    background-color: #111;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #3BAF0B;
+}
+

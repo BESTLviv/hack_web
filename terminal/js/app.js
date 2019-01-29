@@ -44,6 +44,8 @@ $('section').each( function(i,e) {
 
 
 // Command Input------------------------------
+  
+  var check = 0;
 
   $('input[type="text"]').keyup(function(e){
 
@@ -51,6 +53,70 @@ $('section').each( function(i,e) {
 
       $('.command').hide();
       var destination = $('input[type="text"]').val();
+
+      if (destination === 'exit') {
+        window.top.close();
+      }
+
+      var check1 = 0;
+      if (destination === 'denied' || destination === 'thanks' || destination === 'email') {
+        check1 = 1;
+      }
+
+      var email;
+
+      if (destination[0] == 'r' &&
+          destination[1] == 'e' &&
+          destination[2] == 'g' &&
+          destination[3] == ' ') {
+
+        email = destination.slice(4, destination.length);
+
+        $('#input_email').val(email);
+
+        if ($('#input_email').is(':valid')) {
+          destination = 'thanks';
+        } else {
+          destination = 'email';
+        }
+
+        $('#input_reg_btn').click();
+        $('#reg_form').submit(function() {});
+      }
+
+      
+      if (check == 2) {} 
+      else if (check == 1) {
+        $('#sudo_command').hide();
+
+        if (destination.toLowerCase() === 'vlsakmb') {
+          destination = 'destroy';
+          check = 2;
+
+          $('#root').text('root');
+          $('#root').css('color', '#ab000d');
+          $('#sudo_command').css('color', '#ab000d');
+          $('.command').css('color', '#ab000d');
+
+        } else {
+          destination = 'denied';
+          check = 0;
+        }
+      } else {
+
+        if (destination === 'destroy' || destination === 'throw') {
+          destination = 'denied';
+        } else if (destination === 'sudo destroy' || destination === 'sudo throw') { 
+          destination = 'sudo';
+          check = 1;
+          $('#sudo_command').show();
+        }
+      }
+
+      if ((destination === 'sudo' && check != 1) || check1 == 1) {
+        destination = 'error';
+        check1 = 0;
+      }
 
       // Display section with id == destination and hide all others
       $('section[id="' + destination + '"]').addClass('open').siblings().removeClass('open');
@@ -70,6 +136,7 @@ $('section').each( function(i,e) {
           $('input[type="text"]').val('');
         }
       });
+
 
     }// end if ENTER key pressed
 
