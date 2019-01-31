@@ -1,0 +1,104 @@
+@import url(http://fonts.googleapis.com/css?family=Inconsolata:400,700);
+
+
+@-webkit-keyframes blink {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes blink {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+canvas {display: block;z-index: 77777;}
+#error-page {
+  position: fixed !important;
+  text-align: center;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 88888;text-shadow:0 3px 4px #000;
+}
+
+body {
+  background-color: black;
+  color: #eee;
+  font-family: 'Inconsolata', monospace;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.password {
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 60px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.granted {
+  position: absolute;
+  top: 75vh;
+  left: 50vw;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 30px;
+}
+
+.info {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.info p {
+  margin: 10px;
+}
+
+.button {
+  background-color: #282828;
+  border: solid 1px #888;
+  padding: 8px 25px;
+  font-size: 26px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  border-radius: 14px;
+}
+
+.button:hover{
+  background-color: #a11;
+}
+
+.start {
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.blink {
+  -webkit-animation: blink 0.8s steps(1, start) infinite alternate;
+          animation: blink 0.8s steps(1, start) infinite alternate;
+}
+
+#console {
+  margin: 10px;
+}
