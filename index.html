@@ -124,7 +124,7 @@
 		            					<img src="images/blocks/benia-logo.png" alt="project_logo" class="img-fluid w-md-100 w-75"/>
 		            				</div>
 		            				<div class="col-sm-9 col-12 mt-xl-0 mt-lg-4 mt-sm-0 mt-4">
-		            					<p class="window-text">// BEST::HACKath0n<br/>// Команда з 3-5 осіб<br/>// м. Львів<br/>// Травень 2019 року<br/>// Попередня реєстрація</p>
+		            					<p class="window-text">// BEST::HACKath0n<br/>// Команда з 3-5 осіб<br/>// м. Львів<br/>// 10-12 Травня<br/>// Відкрито реєстрацію</p>
 		            				</div>
 		            				<div class="col-12 mt-4">
 		            					<p to="window_about" from="window_main" class="window-button button dark-blue w-100 text-center mb-0">детальніше<span>_</span></p>
@@ -135,7 +135,7 @@
 
 		            	<div id="window_about" style="display: none;">
 		            		<div class="bar">
-		            			<h3 class="bar-header"><i to="window_main" from="window_about" class="fas fa-arrow-left window-button"></i> about</h3>
+		            			<h3 class="bar-header">about</h3>
 		            			<div class="points">
 			            			<span></span>
 			            			<span></span>
@@ -151,41 +151,12 @@
 	            </div>
 
 	            <div id="reg-section" class="col-lg-6 section light-blue p-md-5 p-4">
-	            	<h2 id="reg_header" class="position-relative" data-text="Попередня реєстрація">Попередня реєстрація</h2>
-	            	<h3 class="w-100 text-center">Що це?</h3>
-	            	<p>Залиш свою пошту в формі нижче, і в день початку реєстрації ми надішлемо тобі електронного листа з детальною інформацією про проект.</p>
-	            	<form id="reg_form" class="gform" method="POST" data-email="hackathon_v4@googlegroups.com" action="https://script.google.com/macros/s/AKfycbzrrXsEgeYY-9wszJgSFatqnSh2Bmf5d-QOWKmKmg/exec">
-	            		<input class="mt-1 w-100" type="email" name="email_reg" placeholder="Ввести email" required="required" />
-	            		<input id="input_reg_btn" type="submit" class="d-none"/>
-	            		<p id="reg_btn" class="button dark-blue w-100 mt-4 mb-0">зареєструватись<span>_</span></p>
-	            	</form>
-	            	<div class="popup" style="display: none;">
-	            		<div class="window d-flex justify-content-center align-items-center">		        
-			            	<div>
-			            		<div class="bar">
-			            			<h3 class="bar-header">реєстрація</h3>
-			            			<div class="points">
-				            			<span></span>
-				            			<span></span>
-				            			<span></span>
-			            			</div>
-			            		</div>
-			            		<div class="content">
-			            			<div class="row px-md-5 px-4 py-4">
-			            				<div class="col-md-3 col-12 d-flex align-items-center justify-content-center">
-			            					<img src="images/blocks/benia-logo.png" alt="project_logo" class="img-fluid w-md-100 w-75"/>
-			            				</div>
-			            				<div class="col-md-9 col-12 mt-md-0 mt-4">
-			            					<p class="window-text">// Вас зареєстровано!.<br/>// :D<br/>// :3<br/>// &_&<br/>// ^_^</p>
-			            				</div>
-			            				<div class="col-12 mt-4">
-			            					<p class="button dark-blue w-100 text-center mb-0">ок<span>_</span></p>
-			            				</div>
-			            			</div>
-			            		</div>
-			            	</div>
-			            </div>
-	            	</div>
+	            	<h2 id="reg_header" class="position-relative" data-text="Реєстрація">Реєстрація</h2>
+	            	<h3 class="w-100 text-center">BEST::HACKath0n 2019</h3>
+	            	<p>У тебе є нагода стати частинкою грандіозної події, а саме -  BEST::HACKath0n.<br><br>Переходь за посиланням та реєструй свою команду!<br>Не пропусти нагоду отримати безцінний досвід та незабутні емоції.</p>
+            		<h3 class="w-100 text-center">Залишилось часу:</h3>
+            		<p id="timer"><span id="t_hours"></span> : <span id="t_minutes"></span> : <span id="t_sec"></span></p>
+            		<a id="reg_btn" href="https://goo.gl/forms/UEUh4M483mymTbxg2" class="button dark-blue w-100 my-4 mb-0">зареєструватись<span>_</span></a>
 	            </div>
           	</div>
 	    </div>
@@ -327,5 +298,44 @@
 	    <!--Main JS file-->
 	    <script src="js/index.js"></script>
 	    <script data-cfasync="false" type="text/javascript" src="js/form-submission-handler.js"></script>
+	    <script>
+	    	var countDownDate = new Date("April 26, 2019 23:59:59").getTime();
+
+			// Update the count down every 1 second
+			var x = setInterval(function() {
+
+			  // Get todays date and time
+			  var now = new Date().getTime();
+
+			  // Find the distance between now and the count down date
+			  var distance = countDownDate - now;
+
+			  // Time calculations for days, hours, minutes and seconds
+			  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+			  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)) * days;
+			  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+			  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+			  // Display the result in the element with id="demo"
+			  document.getElementById("t_hours").innerHTML = hours;
+			  if (minutes < 10) {
+			  	document.getElementById("t_minutes").innerHTML = "0" + minutes;
+			  } else {
+			  	document.getElementById("t_minutes").innerHTML = minutes;
+			  }
+
+			  if (seconds < 10) {
+			  	document.getElementById("t_sec").innerHTML = "0" + seconds;
+			  } else {
+			  	document.getElementById("t_sec").innerHTML = seconds;
+			  }
+
+			  // If the count down is finished, write some text 
+			  if (distance < 0) {
+			    clearInterval(x);
+			    document.getElementById("demo").innerHTML = "EXPIRED";
+			  }
+			}, 1000);
+	    </script>
     </body>
 </html>
