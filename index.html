@@ -124,7 +124,7 @@
 		            					<img src="images/blocks/benia-logo.png" alt="project_logo" class="img-fluid w-md-100 w-75"/>
 		            				</div>
 		            				<div class="col-sm-9 col-12 mt-xl-0 mt-lg-4 mt-sm-0 mt-4">
-		            					<p class="window-text">// BEST::HACKath0n<br/>// Команда з 3-5 осіб<br/>// м. Львів<br/>// 10-12 Травня<br/>// Відкрито реєстрацію</p>
+		            					<p class="window-text">// BEST::HACKath0n<br/>// <span class="window-button" to="window_entertainment" from="window_main" style="cursor: pointer; color: blue; text-decoration: underline;">Entertainment?</span><br/>// Команда з 3-5 осіб<br/>// м. Львів<br/>// 10-12 Травня<br/>// Відкрито реєстрацію</p>
 		            				</div>
 		            				<div class="col-12 mt-4">
 		            					<p to="window_about" from="window_main" class="window-button button dark-blue w-100 text-center mb-0">детальніше<span>_</span></p>
@@ -135,7 +135,12 @@
 
 		            	<div id="window_about" style="display: none;">
 		            		<div class="bar">
-		            			<h3 class="bar-header">about</h3>
+		            			<div class="bar-back-arrow window-button" to="window_main" from="window_about">
+		            				<span></span>
+			            			<span></span>
+			            			<span></span>
+		            			</div>
+		            			<h3 class="bar-header ml-5">about</h3>
 		            			<div class="points">
 			            			<span></span>
 			            			<span></span>
@@ -144,7 +149,27 @@
 		            		</div>
 		            		<div class="content px-md-5 px-4 py-4">
 		            			<p class="window-text mb-4">/**<br/>Hackathon - це захід, на який збираються розробники, дизайнери, інженери, щоб за обмежений час в режимі інтенсиву та командної роботи, створити та презентувати свій проект.<br/>**/</p>
-		            			<p id="reg_glitch_button" class="button dark-blue w-100 text-center m-0 scroll-button" to-section="reg-section">Реєстрація<span>_</span></p>
+		            			<p class="reg_glitch_button button dark-blue w-100 text-center m-0 scroll-button" to-section="reg-section">Реєстрація<span>_</span></p>
+		            		</div>
+		            	</div>
+
+		            	<div id="window_entertainment" style="display: none;">
+		            		<div class="bar">
+		            			<div class="bar-back-arrow window-button" to="window_main" from="window_entertainment">
+		            				<span></span>
+			            			<span></span>
+			            			<span></span>
+		            			</div>
+		            			<h3 class="bar-header ml-5">entertainment</h3>
+		            			<div class="points">
+			            			<span></span>
+			            			<span></span>
+			            			<span></span>
+		            			</div>
+		            		</div>
+		            		<div class="content px-md-5 px-4 py-4">
+		            			<p class="window-text mb-4">/**<br/>Завдання учасників на хакатоні - створити проект, який зможе покращити рівень розваг. Тема охоплює безліч галузей: від спортивних активностей та подорожей до ігор чи інтерактивного кіно. А з використанням сучасних технологій, таких як AI, VR/AR, IoT чи робототехніки, відкривається широкий простір для нових ідей.<br/>**/</p>
+		            			<p class="reg_glitch_button button dark-blue w-100 text-center m-0 scroll-button" to-section="reg-section">Реєстрація<span>_</span></p>
 		            		</div>
 		            	</div>
 		            </div>
@@ -268,7 +293,7 @@
 		            					<p class="window-text">hack@best-lviv.org.ua</p>
 		            				</div>
 		            				<div class="row col-xl-7 col-12 mt-4 px-3">
-		            					<p class="window-text">Адреса:<br/><span style="font-size: 0.8em;">Національний університет "Львівська політехніка"<br/>Україна 79013, Львів, вул. Степана Бандери 12/235</span></p>
+		            					<p class="window-text">Адреса:<br/><span style="font-size: 0.8em;">Національний університет "Львівська політехніка"<br/>Україна 79013, Львів, вул. Степана Бандери 12/235</span><br/><a href="./rules/index.html" style="color: blue; text-decoration: underline !important; font-size: 0.8em;">Правила Проекту</a></p>
 		            				</div>
 		            				<div class="col-xl-5 col-12 mt-4 px-0">
 		            					<a href="mailto:hack@best-lviv.org.ua" class="button dark-blue">Надіслати лист<span>_</span></a>

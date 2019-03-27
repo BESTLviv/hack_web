@@ -45,7 +45,7 @@ $(document).ready(function(){
 
 
   // adding temporary glich to text
-  $('#reg_glitch_button').click(function() {
+  $('.reg_glitch_button').click(function() {
     $('#reg_header').addClass('glitch');
     setTimeout(function() {
       $('#reg_header').removeClass('glitch');

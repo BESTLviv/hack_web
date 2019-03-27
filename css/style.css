@@ -586,10 +586,27 @@ p {
   border-radius: 16px;
 }
 
-.bar-header span {
+.bar-back-arrow {
+  width: 24px;
+  height: 100%;
+  margin-left: 36px;
+  cursor: pointer;
+}
+
+.bar-back-arrow span {
   position: absolute;
-  left: 0px;
-  width: 20px;
-  height: 2px;
+  top: calc(50% - 1px);
+  width: 24px;
+  height: 3px;
   background-color: white;
+}
+
+.bar-back-arrow span:nth-of-type(1) {
+  width: 14px;
+  transform: translate(-3px, 4px) rotate(45deg);
+}
+
+.bar-back-arrow span:nth-of-type(3) {
+  width: 14px;
+  transform: translate(-3px, -4px) rotate(-45deg);
 }
