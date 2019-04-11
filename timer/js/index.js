@@ -53,14 +53,6 @@ $(document).ready(function(){
   });
 
 
-  $('#theme_glitch_button').click(function() {
-    $('#theme_header').addClass('glitch');
-    setTimeout(function() {
-      $('#theme_header').removeClass('glitch');
-    }, 5000);
-  });
-
-
   // popup opening and closing
   $('#reg_form').submit(function() {
     $('.popup').fadeIn(800);

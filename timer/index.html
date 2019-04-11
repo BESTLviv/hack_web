@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta charset="UTF-8"/>
+		<title>BEST::HACKath0n</title>
+		<meta name="description" content="BEST::HACKath0n - це хакатон, який відбудеться 11-12 травня  2019 року. Організатором є неприбуткова міжнародна студентська організація BEST, метою якої є розвиток студентів.">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    	<link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
+    	<link rel="stylesheet" href="fonts/styles.css">
+
+    	<link rel="shortcut icon" href="favicon.png" type="image/png">
+
+      	<link rel="stylesheet" href="css/bootstrap.min.css">
+      	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+    	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-38764566-3"></script>
+    	<script>
+        	window.dataLayer = window.dataLayer || [];
+        	function gtag(){dataLayer.push(arguments);}
+        	gtag('js', new Date());
+        	gtag('config', 'UA-38764566-3');
+      	</script>
+    </head>
+
+    <body>
+	    <!--START About Section-->
+	    <div class="container-fluid px-0">
+	    	<div id="sec" class="row mx-0">
+	            <div id="reg-section" class="col-12 section light-blue p-md-5 p-4" style="background-color: black;">
+            		<p id="timer">
+            			<span id="t_days" data=""></span> <span class="small-timer">days</span>
+            			<span id="t_hours" class="ml-3" data=""></span> :
+            			<span id="t_minutes" data=""></span> :
+            			<span id="t_sec" data=""></span>
+            		</p>
+	            </div>
+          	</div>
+	    </div>
+	    <!-- END About Section-->
+		
+
+
+	    <script src="js/jquery-3.3.1.min.js"></script>
+	    <script src="js/bootstrap.bundle.min.js"></script>
+	    
+	    <!--Main JS file-->
+	    <script src="js/index.js"></script>
+	    <script data-cfasync="false" type="text/javascript" src="js/form-submission-handler.js"></script>
+	    <script>
+	    	var countDownDate = new Date("April 26, 2019 23:59:59").getTime();
+
+			// Update the count down every 1 second
+			var x = setInterval(function() {
+
+			  // Get todays date and time
+			  var now = new Date().getTime();
+
+			  // Find the distance between now and the count down date
+			  var distance = countDownDate - now;
+
+			  // Time calculations for days, hours, minutes and seconds
+			  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+			  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+			  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+			  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+			  // Display the result in the element with id="demo"
+
+			  if (days < 10) {
+			  	document.getElementById("t_days").innerHTML = "0" + days;
+			  } else {
+			  	document.getElementById("t_days").innerHTML = days;
+			  }
+
+			  $("#t_days").attr("data", $("#t_days").text());
+
+			  if (hours < 10) {
+			  	document.getElementById("t_hours").innerHTML = "0" + hours;
+			  } else {
+			  	document.getElementById("t_hours").innerHTML = hours;
+			  }
+
+			  $("#t_hours").attr("data", $("#t_hours").text());
+
+			  if (minutes < 10) {
+			  	document.getElementById("t_minutes").innerHTML = "0" + minutes;
+			  } else {
+			  	document.getElementById("t_minutes").innerHTML = minutes;
+			  }
+
+			  $("#t_minutes").attr("data", $("#t_minutes").text());
+
+			  if (seconds < 10) {
+			  	document.getElementById("t_sec").innerHTML = "0" + seconds;
+			  } else {
+			  	document.getElementById("t_sec").innerHTML = seconds;
+			  }
+
+			  $("#t_sec").attr("data", $("#t_sec").text());
+
+			  // If the count down is finished, write some text 
+			  if (distance < 0) {
+			    clearInterval(x);
+			    document.getElementById("demo").innerHTML = "EXPIRED";
+			  }
+			}, 1000);
+	    </script>
+    </body>
+</html>
