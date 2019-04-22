@@ -12,7 +12,7 @@
  * jQuery Text Typer plugin
  * https://github.com/gr8pathik/jquery-texttyper
 */
-(function(e){"use strict";e.fn.textTyper=function(t){var n={typingClass:"typing",beforeAnimation:function(){},afterAnimation:function(){},speed:10,nextLineDelay:400,startsFrom:0,repeatAnimation:false,repeatDelay:4e3,repeatTimes:1,cursorHtml:'<span class="cursor">|</span>'},r=e.extend({},n,t);this.each(function(){var t=e(this),n=1,i="typingCursor";var s=t,o=s.length,u=[];while(o--){u[o]=e.trim(e(s[o]).html());e(s[o]).html("")}t.init=function(e){var n=r.beforeAnimation;if(n)n();t.animate(0)};t.animate=function(o){var a=s[o],f=r.typingClass,l=r.startsFrom;e(a).addClass(f);var c=setInterval(function(){var f=r.cursorHtml;f=e("<div>").append(e(f).addClass(i)).html();e(a).html(u[o].substr(0,l)+f);l++;if(u[o].length<l){clearInterval(c);o++;if(s[o]){setTimeout(function(){e(a).html(u[o-1]);t.animate(o)},r.nextLineDelay)}else{e(a).find("."+i).remove();if(r.repeatAnimation&&(r.repeatTimes==0||n<r.repeatTimes)){setTimeout(function(){t.animate(0);n++},r.repeatDelay)}else{var h=r.afterAnimation;if(h)h()}}}},r.speed)};t.init()});return this}})(jQuery)
+(function(e){"use strict";e.fn.textTyper=function(t){var n={typingClass:"typing",beforeAnimation:function(){},afterAnimation:function(){},speed:15,nextLineDelay:400,startsFrom:0,repeatAnimation:false,repeatDelay:4e3,repeatTimes:1,cursorHtml:'<span class="cursor">|</span>'},r=e.extend({},n,t);this.each(function(){var t=e(this),n=1,i="typingCursor";var s=t,o=s.length,u=[];while(o--){u[o]=e.trim(e(s[o]).html());e(s[o]).html("")}t.init=function(e){var n=r.beforeAnimation;if(n)n();t.animate(0)};t.animate=function(o){var a=s[o],f=r.typingClass,l=r.startsFrom;e(a).addClass(f);var c=setInterval(function(){var f=r.cursorHtml;f=e("<div>").append(e(f).addClass(i)).html();e(a).html(u[o].substr(0,l)+f);l++;if(u[o].length<l){clearInterval(c);o++;if(s[o]){setTimeout(function(){e(a).html(u[o-1]);t.animate(o)},r.nextLineDelay)}else{e(a).find("."+i).remove();if(r.repeatAnimation&&(r.repeatTimes==0||n<r.repeatTimes)){setTimeout(function(){t.animate(0);n++},r.repeatDelay)}else{var h=r.afterAnimation;if(h)h()}}}},r.speed)};t.init()});return this}})(jQuery)
 
 
 // Let's do it!!
@@ -88,18 +88,24 @@ $('section').each( function(i,e) {
       if (check == 2) {} 
       else if (check == 1) {
         $('#sudo_command').hide();
+        $('#prompt').show();
+        //$('#body').css('background-color','#000');
+        //$('#body').css('color','#0f0');
 
         if (destination.toLowerCase() === 'vlsakmb') {
           destination = 'destroy';
           check = 2;
-
-          $('#root').text('root');
-          $('#root').css('color', '#ab000d');
-          $('#sudo_command').css('color', '#ab000d');
-          $('.command').css('color', '#ab000d');
+          
+          $('#usr').text('root');
+          $('#usr').css('color', '#f00');
+          $('#sudo_command').css('color', '#f00');
+          $('.command').css('color', '#0f0');
 
         } else {
           destination = 'denied';
+          $('#usr').css('color', '#0f0');
+          $('#body').css('background-color','#000');
+          $('#body').css('color','#0f0');
           check = 0;
         }
       } else {
@@ -109,12 +115,17 @@ $('section').each( function(i,e) {
         } else if (destination === 'sudo destroy' || destination === 'sudo throw') { 
           destination = 'sudo';
           check = 1;
+          $('#body').css('background-color','#500');
+          $('#body').css('color','#f00');
+          $('#usr').css('color', '#f00');
           $('#sudo_command').show();
+          $('#prompt').hide();
         }
       }
 
       if ((destination === 'sudo' && check != 1) || check1 == 1) {
         destination = 'error';
+        $('#body').css('background-color: #000');
         check1 = 0;
       }
 
