@@ -21,7 +21,7 @@ function hack() {
 	counter++;
 	if(counter == password.length){
 		$('.granted').removeClass('hidden');
-		setTimeout(function(){ window.location.replace("http://hack.best-lviv.org.ua/terminal"); }, 3000);
+		setTimeout(function(){ window.location.replace("https://best-lviv.org.ua/hack/terminal"); }, 3000);
 	}
 }
 
