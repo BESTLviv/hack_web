@@ -347,42 +347,41 @@
 
 			  // Display the result in the element with id="demo"
 
-			  if (days < 10) {
-			  	document.getElementById("t_days").innerHTML = "0" + days;
+			  if (distance >= 0) {
+				  if (days < 10) {
+				  	document.getElementById("t_days").innerHTML = "0" + days;
+				  } else {
+				  	document.getElementById("t_days").innerHTML = days;
+				  }
+
+				  $("#t_days").attr("data", $("#t_days").text());
+
+				  if (hours < 10) {
+				  	document.getElementById("t_hours").innerHTML = "0" + hours;
+				  } else {
+				  	document.getElementById("t_hours").innerHTML = hours;
+				  }
+
+				  $("#t_hours").attr("data", $("#t_hours").text());
+
+				  if (minutes < 10) {
+				  	document.getElementById("t_minutes").innerHTML = "0" + minutes;
+				  } else {
+				  	document.getElementById("t_minutes").innerHTML = minutes;
+				  }
+
+				  $("#t_minutes").attr("data", $("#t_minutes").text());
+
+				  if (seconds < 10) {
+				  	document.getElementById("t_sec").innerHTML = "0" + seconds;
+				  } else {
+				  	document.getElementById("t_sec").innerHTML = seconds;
+				  }
+
+				  $("#t_sec").attr("data", $("#t_sec").text());
+			    
 			  } else {
-			  	document.getElementById("t_days").innerHTML = days;
-			  }
-
-			  $("#t_days").attr("data", $("#t_days").text());
-
-			  if (hours < 10) {
-			  	document.getElementById("t_hours").innerHTML = "0" + hours;
-			  } else {
-			  	document.getElementById("t_hours").innerHTML = hours;
-			  }
-
-			  $("#t_hours").attr("data", $("#t_hours").text());
-
-			  if (minutes < 10) {
-			  	document.getElementById("t_minutes").innerHTML = "0" + minutes;
-			  } else {
-			  	document.getElementById("t_minutes").innerHTML = minutes;
-			  }
-
-			  $("#t_minutes").attr("data", $("#t_minutes").text());
-
-			  if (seconds < 10) {
-			  	document.getElementById("t_sec").innerHTML = "0" + seconds;
-			  } else {
-			  	document.getElementById("t_sec").innerHTML = seconds;
-			  }
-
-			  $("#t_sec").attr("data", $("#t_sec").text());
-
-			  // If the count down is finished, write some text 
-			  if (distance < 0) {
-			    clearInterval(x);
-			    document.getElementById("demo").innerHTML = "EXPIRED";
+			  	$("#timer").text("no time left");
 			  }
 			}, 1000);
 	    </script>
