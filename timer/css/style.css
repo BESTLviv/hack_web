@@ -587,7 +587,7 @@ p {
   color: white;
   font-family: 'hooge05_55Cyr2';
   text-align: center;
-  margin-top: calc(50vh - 160px);
+  margin-top: calc(50vh - 300px);
 }
 
 #timer span {

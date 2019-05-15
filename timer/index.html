@@ -29,9 +29,8 @@
 	    <!--START About Section-->
 	    <div class="container-fluid px-0">
 	    	<div id="sec" class="row mx-0">
-	            <div id="reg-section" class="col-12 section light-blue p-md-5 p-4" style="background-color: black;">
-            		<p id="timer">
-            			<span id="t_days" data=""></span> <span class="small-timer">days</span>
+	            <div id="reg-section" class="col-12 section light-blue p-md-3 p-4" style="background-color: black;">
+            		<p id="timer" style="font-size: 18em;">
             			<span id="t_hours" class="ml-3" data=""></span> :
             			<span id="t_minutes" data=""></span> :
             			<span id="t_sec" data=""></span>
@@ -50,7 +49,7 @@
 	    <script src="js/index.js"></script>
 	    <script data-cfasync="false" type="text/javascript" src="js/form-submission-handler.js"></script>
 	    <script>
-	    	var countDownDate = new Date("April 26, 2019 23:59:59").getTime();
+	    	var countDownDate = new Date("May 12, 2019 13:00:00").getTime();
 
 			// Update the count down every 1 second
 			var x = setInterval(function() {
@@ -69,11 +68,6 @@
 
 			  // Display the result in the element with id="demo"
 
-			  if (days < 10) {
-			  	document.getElementById("t_days").innerHTML = "0" + days;
-			  } else {
-			  	document.getElementById("t_days").innerHTML = days;
-			  }
 
 			  $("#t_days").attr("data", $("#t_days").text());
 
